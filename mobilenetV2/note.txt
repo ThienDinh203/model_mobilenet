@@ -1,0 +1,1670 @@
+ dinhthien@DESKTOP-9O4K9B3:/mnt/d/thien/model/mobilenetV2$ python3 mobilenetV2.py 
+2025-04-14 09:23:29.405837: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1744597409.483059   23424 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1744597409.505601   23424 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1744597409.671443   23424 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1744597409.671502   23424 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1744597409.671505   23424 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1744597409.671507   23424 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-14 09:23:29.691561: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 9620 files belonging to 3 classes.
+Using 7696 files for training.
+2025-04-14 09:23:38.486756: E external/local_xla/xla/stream_executor/cuda/cuda_platform.cc:51] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+Found 9620 files belonging to 3 classes.
+Using 1924 files for validation.
+Epoch 1/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 118s 481ms/step - accuracy: 0.5033 - loss: 1.0075 - val_accuracy: 0.7734 - val_loss: 0.6261
+Epoch 2/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 115s 476ms/step - accuracy: 0.7642 - loss: 0.6040 - val_accuracy: 0.8415 - val_loss: 0.4552
+Epoch 3/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 114s 474ms/step - accuracy: 0.8323 - loss: 0.4648 - val_accuracy: 0.8737 - val_loss: 0.3787
+Epoch 4/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 105s 435ms/step - accuracy: 0.8661 - loss: 0.3758 - val_accuracy: 0.8888 - val_loss: 0.3221
+Epoch 5/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 110s 458ms/step - accuracy: 0.8863 - loss: 0.3365 - val_accuracy: 0.9002 - val_loss: 0.2805
+Epoch 6/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 109s 452ms/step - accuracy: 0.9033 - loss: 0.2855 - val_accuracy: 0.9137 - val_loss: 0.2533
+Epoch 7/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 101s 421ms/step - accuracy: 0.9198 - loss: 0.2463 - val_accuracy: 0.9205 - val_loss: 0.2302
+Epoch 8/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 108s 449ms/step - accuracy: 0.9282 - loss: 0.2177 - val_accuracy: 0.9283 - val_loss: 0.2102
+Epoch 9/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 107s 444ms/step - accuracy: 0.9322 - loss: 0.1997 - val_accuracy: 0.9345 - val_loss: 0.1988
+Epoch 10/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 111s 461ms/step - accuracy: 0.9395 - loss: 0.1822 - val_accuracy: 0.9397 - val_loss: 0.1811
+Epoch 11/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 117s 484ms/step - accuracy: 0.9451 - loss: 0.1676 - val_accuracy: 0.9423 - val_loss: 0.1739
+Epoch 12/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 120s 497ms/step - accuracy: 0.9582 - loss: 0.1443 - val_accuracy: 0.9459 - val_loss: 0.1669
+Epoch 13/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 119s 493ms/step - accuracy: 0.9585 - loss: 0.1298 - val_accuracy: 0.9418 - val_loss: 0.1652
+Epoch 14/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 125s 517ms/step - accuracy: 0.9634 - loss: 0.1176 - val_accuracy: 0.9491 - val_loss: 0.1501
+Epoch 15/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 118s 490ms/step - accuracy: 0.9631 - loss: 0.1125 - val_accuracy: 0.9449 - val_loss: 0.1530
+Epoch 16/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 118s 489ms/step - accuracy: 0.9687 - loss: 0.1070 - val_accuracy: 0.9475 - val_loss: 0.1477
+Epoch 17/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 117s 486ms/step - accuracy: 0.9670 - loss: 0.0999 - val_accuracy: 0.9496 - val_loss: 0.1406
+Epoch 18/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 124s 517ms/step - accuracy: 0.9706 - loss: 0.0930 - val_accuracy: 0.9454 - val_loss: 0.1480
+Epoch 19/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 120s 499ms/step - accuracy: 0.9758 - loss: 0.0818 - val_accuracy: 0.9465 - val_loss: 0.1424
+Epoch 20/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 108s 449ms/step - accuracy: 0.9760 - loss: 0.0795 - val_accuracy: 0.9511 - val_loss: 0.1303
+Saved artifact at '/tmp/tmpk2_ach3e'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): TensorSpec(shape=(None, 224, 224, 3), dtype=tf.float32, name='keras_tensor')
+Output Type:
+  TensorSpec(shape=(None, 3), dtype=tf.float32, name=None)
+Captures:
+  140431594168464: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140428002109824: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140428002099968: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140428002101728: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140428002110176: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140428002105600: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987586384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987593072: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427984759696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987586736: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427984761984: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987594128: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987596768: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987583040: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987594656: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987598176: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987960752: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987960400: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987960576: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987962512: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987971136: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987969376: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987972192: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987961984: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987970432: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987974832: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988026112: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988025760: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987974128: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988027872: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987968320: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988032448: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988035088: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988031040: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988032976: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988041424: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988036672: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988037024: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988037904: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988040192: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988037376: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986785856: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986788496: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986784448: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986786384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427988039840: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986793248: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986795888: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986791840: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986793776: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986792192: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986883984: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986886800: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986882576: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986885040: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986892608: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986891552: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986894192: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986881696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986892080: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986882928: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986963616: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986966080: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986961504: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986965024: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986972416: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986970656: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986973472: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986961680: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986971712: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986976112: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987043776: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987042896: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987046064: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987045536: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986969600: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987051520: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987054160: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987050112: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987052048: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987056624: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987125696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987124464: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987058208: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987126048: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987056448: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987132032: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987134672: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987130624: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987132560: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987137488: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987137136: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987137312: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987138544: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987191056: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987139600: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987197568: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987200384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987196160: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987198624: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987203024: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987202672: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987202848: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987204080: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987272976: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987196512: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987277024: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987279664: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987275616: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987277552: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987286000: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987284240: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987287056: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987275968: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987285296: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987281952: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987406688: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987409328: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987405280: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987407216: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987283184: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987414256: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987416896: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987412848: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987414784: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427987413200: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985424048: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985425104: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985420880: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985424400: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985431440: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985430384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985433024: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985420528: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985430912: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985435840: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985470736: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985470384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985473024: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985472496: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985479888: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985478128: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985480944: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985469680: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985479184: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985483584: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985585072: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985584368: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985484640: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985584192: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985477072: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985591760: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985594400: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985590352: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985592288: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985596864: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985595984: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985596336: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985597920: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985600208: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985596688: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985672272: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985674912: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985670864: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985672800: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985598976: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985678432: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985681072: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985677024: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985678960: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985677376: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985751376: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985754192: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985749968: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985752432: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985760000: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985758944: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985761584: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985749088: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985759472: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985750320: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985848448: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985851264: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985846688: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985850208: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985857600: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985855840: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985858656: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985846864: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985856896: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985861296: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985961728: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985961376: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985860592: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985963488: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985854784: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985969472: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985972112: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985968064: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985970000: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985975984: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986028672: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986026912: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985975280: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986029024: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427985975808: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986035008: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986037648: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986033600: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986035536: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986042224: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986038704: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986036240: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986039408: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986038352: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986041344: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986114112: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986116928: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986112704: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986115168: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986122736: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986121680: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986124320: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986111824: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986122208: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986113056: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986227744: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986230384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986226336: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986228272: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986236720: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986234960: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986237776: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986226688: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986236016: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986232672: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986308256: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986310896: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986306848: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986308784: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986233904: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986315824: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986318464: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986314416: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986316352: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986320928: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986373616: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986373088: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986374144: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986373968: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986320752: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986379952: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986382592: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986378544: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986380480: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986384176: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986383824: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986384000: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427986385232: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983307344: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983316672: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983317376: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983320896: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983322128: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983318784: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983320192: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983318256: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983657568: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983657744: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983657040: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983654928: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983653696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983665312: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  140427983662144: TensorSpec(shape=(), dtype=tf.resource, name=None)
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1744599716.713110   23424 tf_tfl_flatbuffer_helpers.cc:365] Ignored output_format.
+W0000 00:00:1744599716.713238   23424 tf_tfl_flatbuffer_helpers.cc:368] Ignored drop_control_dependency.
+2025-04-14 10:01:56.713917: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: /tmp/tmpk2_ach3e
+2025-04-14 10:01:56.723525: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2025-04-14 10:01:56.723570: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: /tmp/tmpk2_ach3e
+I0000 00:00:1744599716.805018   23424 mlir_graph_optimization_pass.cc:425] MLIR V1 optimization pass is not enabled
+2025-04-14 10:01:56.817745: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2025-04-14 10:01:57.237878: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: /tmp/tmpk2_ach3e
+2025-04-14 10:01:57.345938: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 631963 microseconds.
+2025-04-14 10:01:57.485922: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+Model: "functional"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                  ┃ Output Shape              ┃         Param # ┃ Connected to               ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ input_layer (InputLayer)      │ (None, 224, 224, 3)       │               0 │ -                          │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ Conv1 (Conv2D)                │ (None, 112, 112, 32)      │             864 │ input_layer[0][0]          │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ bn_Conv1 (BatchNormalization) │ (None, 112, 112, 32)      │             128 │ Conv1[0][0]                │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ Conv1_relu (ReLU)             │ (None, 112, 112, 32)      │               0 │ bn_Conv1[0][0]             │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_depthwise       │ (None, 112, 112, 32)      │             288 │ Conv1_relu[0][0]           │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_depthwise_BN    │ (None, 112, 112, 32)      │             128 │ expanded_conv_depthwise[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_depthwise_relu  │ (None, 112, 112, 32)      │               0 │ expanded_conv_depthwise_B… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_project         │ (None, 112, 112, 16)      │             512 │ expanded_conv_depthwise_r… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_project_BN      │ (None, 112, 112, 16)      │              64 │ expanded_conv_project[0][… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_1_expand (Conv2D)       │ (None, 112, 112, 96)      │           1,536 │ expanded_conv_project_BN[… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_1_expand_BN             │ (None, 112, 112, 96)      │             384 │ block_1_expand[0][0]       │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_1_expand_relu (ReLU)    │ (None, 112, 112, 96)      │               0 │ block_1_expand_BN[0][0]    │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_1_pad (ZeroPadding2D)   │ (None, 113, 113, 96)      │               0 │ block_1_expand_relu[0][0]  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_1_depthwise             │ (None, 56, 56, 96)        │             864 │ block_1_pad[0][0]          │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_1_depthwise_BN          │ (None, 56, 56, 96)        │             384 │ block_1_depthwise[0][0]    │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_1_depthwise_relu (ReLU) │ (None, 56, 56, 96)        │               0 │ block_1_depthwise_BN[0][0] │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_1_project (Conv2D)      │ (None, 56, 56, 24)        │           2,304 │ block_1_depthwise_relu[0]… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_1_project_BN            │ (None, 56, 56, 24)        │              96 │ block_1_project[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_2_expand (Conv2D)       │ (None, 56, 56, 144)       │           3,456 │ block_1_project_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_2_expand_BN             │ (None, 56, 56, 144)       │             576 │ block_2_expand[0][0]       │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_2_expand_relu (ReLU)    │ (None, 56, 56, 144)       │               0 │ block_2_expand_BN[0][0]    │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_2_depthwise             │ (None, 56, 56, 144)       │           1,296 │ block_2_expand_relu[0][0]  │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_2_depthwise_BN          │ (None, 56, 56, 144)       │             576 │ block_2_depthwise[0][0]    │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_2_depthwise_relu (ReLU) │ (None, 56, 56, 144)       │               0 │ block_2_depthwise_BN[0][0] │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_2_project (Conv2D)      │ (None, 56, 56, 24)        │           3,456 │ block_2_depthwise_relu[0]… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_2_project_BN            │ (None, 56, 56, 24)        │              96 │ block_2_project[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_2_add (Add)             │ (None, 56, 56, 24)        │               0 │ block_1_project_BN[0][0],  │
+│                               │                           │                 │ block_2_project_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_3_expand (Conv2D)       │ (None, 56, 56, 144)       │           3,456 │ block_2_add[0][0]          │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_3_expand_BN             │ (None, 56, 56, 144)       │             576 │ block_3_expand[0][0]       │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_3_expand_relu (ReLU)    │ (None, 56, 56, 144)       │               0 │ block_3_expand_BN[0][0]    │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_3_pad (ZeroPadding2D)   │ (None, 57, 57, 144)       │               0 │ block_3_expand_relu[0][0]  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_3_depthwise             │ (None, 28, 28, 144)       │           1,296 │ block_3_pad[0][0]          │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_3_depthwise_BN          │ (None, 28, 28, 144)       │             576 │ block_3_depthwise[0][0]    │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_3_depthwise_relu (ReLU) │ (None, 28, 28, 144)       │               0 │ block_3_depthwise_BN[0][0] │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_3_project (Conv2D)      │ (None, 28, 28, 32)        │           4,608 │ block_3_depthwise_relu[0]… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_3_project_BN            │ (None, 28, 28, 32)        │             128 │ block_3_project[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_4_expand (Conv2D)       │ (None, 28, 28, 192)       │           6,144 │ block_3_project_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_4_expand_BN             │ (None, 28, 28, 192)       │             768 │ block_4_expand[0][0]       │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_4_expand_relu (ReLU)    │ (None, 28, 28, 192)       │               0 │ block_4_expand_BN[0][0]    │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_4_depthwise             │ (None, 28, 28, 192)       │           1,728 │ block_4_expand_relu[0][0]  │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_4_depthwise_BN          │ (None, 28, 28, 192)       │             768 │ block_4_depthwise[0][0]    │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_4_depthwise_relu (ReLU) │ (None, 28, 28, 192)       │               0 │ block_4_depthwise_BN[0][0] │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_4_project (Conv2D)      │ (None, 28, 28, 32)        │           6,144 │ block_4_depthwise_relu[0]… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_4_project_BN            │ (None, 28, 28, 32)        │             128 │ block_4_project[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_4_add (Add)             │ (None, 28, 28, 32)        │               0 │ block_3_project_BN[0][0],  │
+│                               │                           │                 │ block_4_project_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_5_expand (Conv2D)       │ (None, 28, 28, 192)       │           6,144 │ block_4_add[0][0]          │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_5_expand_BN             │ (None, 28, 28, 192)       │             768 │ block_5_expand[0][0]       │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_5_expand_relu (ReLU)    │ (None, 28, 28, 192)       │               0 │ block_5_expand_BN[0][0]    │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_5_depthwise             │ (None, 28, 28, 192)       │           1,728 │ block_5_expand_relu[0][0]  │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_5_depthwise_BN          │ (None, 28, 28, 192)       │             768 │ block_5_depthwise[0][0]    │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_5_depthwise_relu (ReLU) │ (None, 28, 28, 192)       │               0 │ block_5_depthwise_BN[0][0] │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_5_project (Conv2D)      │ (None, 28, 28, 32)        │           6,144 │ block_5_depthwise_relu[0]… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_5_project_BN            │ (None, 28, 28, 32)        │             128 │ block_5_project[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_5_add (Add)             │ (None, 28, 28, 32)        │               0 │ block_4_add[0][0],         │
+│                               │                           │                 │ block_5_project_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_6_expand (Conv2D)       │ (None, 28, 28, 192)       │           6,144 │ block_5_add[0][0]          │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_6_expand_BN             │ (None, 28, 28, 192)       │             768 │ block_6_expand[0][0]       │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_6_expand_relu (ReLU)    │ (None, 28, 28, 192)       │               0 │ block_6_expand_BN[0][0]    │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_6_pad (ZeroPadding2D)   │ (None, 29, 29, 192)       │               0 │ block_6_expand_relu[0][0]  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_6_depthwise             │ (None, 14, 14, 192)       │           1,728 │ block_6_pad[0][0]          │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_6_depthwise_BN          │ (None, 14, 14, 192)       │             768 │ block_6_depthwise[0][0]    │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_6_depthwise_relu (ReLU) │ (None, 14, 14, 192)       │               0 │ block_6_depthwise_BN[0][0] │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_6_project (Conv2D)      │ (None, 14, 14, 64)        │          12,288 │ block_6_depthwise_relu[0]… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_6_project_BN            │ (None, 14, 14, 64)        │             256 │ block_6_project[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_7_expand (Conv2D)       │ (None, 14, 14, 384)       │          24,576 │ block_6_project_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_7_expand_BN             │ (None, 14, 14, 384)       │           1,536 │ block_7_expand[0][0]       │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_7_expand_relu (ReLU)    │ (None, 14, 14, 384)       │               0 │ block_7_expand_BN[0][0]    │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_7_depthwise             │ (None, 14, 14, 384)       │           3,456 │ block_7_expand_relu[0][0]  │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_7_depthwise_BN          │ (None, 14, 14, 384)       │           1,536 │ block_7_depthwise[0][0]    │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_7_depthwise_relu (ReLU) │ (None, 14, 14, 384)       │               0 │ block_7_depthwise_BN[0][0] │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_7_project (Conv2D)      │ (None, 14, 14, 64)        │          24,576 │ block_7_depthwise_relu[0]… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_7_project_BN            │ (None, 14, 14, 64)        │             256 │ block_7_project[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_7_add (Add)             │ (None, 14, 14, 64)        │               0 │ block_6_project_BN[0][0],  │
+│                               │                           │                 │ block_7_project_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_8_expand (Conv2D)       │ (None, 14, 14, 384)       │          24,576 │ block_7_add[0][0]          │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_8_expand_BN             │ (None, 14, 14, 384)       │           1,536 │ block_8_expand[0][0]       │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_8_expand_relu (ReLU)    │ (None, 14, 14, 384)       │               0 │ block_8_expand_BN[0][0]    │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_8_depthwise             │ (None, 14, 14, 384)       │           3,456 │ block_8_expand_relu[0][0]  │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_8_depthwise_BN          │ (None, 14, 14, 384)       │           1,536 │ block_8_depthwise[0][0]    │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_8_depthwise_relu (ReLU) │ (None, 14, 14, 384)       │               0 │ block_8_depthwise_BN[0][0] │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_8_project (Conv2D)      │ (None, 14, 14, 64)        │          24,576 │ block_8_depthwise_relu[0]… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_8_project_BN            │ (None, 14, 14, 64)        │             256 │ block_8_project[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_8_add (Add)             │ (None, 14, 14, 64)        │               0 │ block_7_add[0][0],         │
+│                               │                           │                 │ block_8_project_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_9_expand (Conv2D)       │ (None, 14, 14, 384)       │          24,576 │ block_8_add[0][0]          │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_9_expand_BN             │ (None, 14, 14, 384)       │           1,536 │ block_9_expand[0][0]       │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_9_expand_relu (ReLU)    │ (None, 14, 14, 384)       │               0 │ block_9_expand_BN[0][0]    │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_9_depthwise             │ (None, 14, 14, 384)       │           3,456 │ block_9_expand_relu[0][0]  │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_9_depthwise_BN          │ (None, 14, 14, 384)       │           1,536 │ block_9_depthwise[0][0]    │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_9_depthwise_relu (ReLU) │ (None, 14, 14, 384)       │               0 │ block_9_depthwise_BN[0][0] │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_9_project (Conv2D)      │ (None, 14, 14, 64)        │          24,576 │ block_9_depthwise_relu[0]… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_9_project_BN            │ (None, 14, 14, 64)        │             256 │ block_9_project[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_9_add (Add)             │ (None, 14, 14, 64)        │               0 │ block_8_add[0][0],         │
+│                               │                           │                 │ block_9_project_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_10_expand (Conv2D)      │ (None, 14, 14, 384)       │          24,576 │ block_9_add[0][0]          │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_10_expand_BN            │ (None, 14, 14, 384)       │           1,536 │ block_10_expand[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_10_expand_relu (ReLU)   │ (None, 14, 14, 384)       │               0 │ block_10_expand_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_10_depthwise            │ (None, 14, 14, 384)       │           3,456 │ block_10_expand_relu[0][0] │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_10_depthwise_BN         │ (None, 14, 14, 384)       │           1,536 │ block_10_depthwise[0][0]   │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_10_depthwise_relu       │ (None, 14, 14, 384)       │               0 │ block_10_depthwise_BN[0][… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_10_project (Conv2D)     │ (None, 14, 14, 96)        │          36,864 │ block_10_depthwise_relu[0… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_10_project_BN           │ (None, 14, 14, 96)        │             384 │ block_10_project[0][0]     │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_11_expand (Conv2D)      │ (None, 14, 14, 576)       │          55,296 │ block_10_project_BN[0][0]  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_11_expand_BN            │ (None, 14, 14, 576)       │           2,304 │ block_11_expand[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_11_expand_relu (ReLU)   │ (None, 14, 14, 576)       │               0 │ block_11_expand_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_11_depthwise            │ (None, 14, 14, 576)       │           5,184 │ block_11_expand_relu[0][0] │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_11_depthwise_BN         │ (None, 14, 14, 576)       │           2,304 │ block_11_depthwise[0][0]   │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_11_depthwise_relu       │ (None, 14, 14, 576)       │               0 │ block_11_depthwise_BN[0][… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_11_project (Conv2D)     │ (None, 14, 14, 96)        │          55,296 │ block_11_depthwise_relu[0… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_11_project_BN           │ (None, 14, 14, 96)        │             384 │ block_11_project[0][0]     │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_11_add (Add)            │ (None, 14, 14, 96)        │               0 │ block_10_project_BN[0][0], │
+│                               │                           │                 │ block_11_project_BN[0][0]  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_12_expand (Conv2D)      │ (None, 14, 14, 576)       │          55,296 │ block_11_add[0][0]         │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_12_expand_BN            │ (None, 14, 14, 576)       │           2,304 │ block_12_expand[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_12_expand_relu (ReLU)   │ (None, 14, 14, 576)       │               0 │ block_12_expand_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_12_depthwise            │ (None, 14, 14, 576)       │           5,184 │ block_12_expand_relu[0][0] │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_12_depthwise_BN         │ (None, 14, 14, 576)       │           2,304 │ block_12_depthwise[0][0]   │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_12_depthwise_relu       │ (None, 14, 14, 576)       │               0 │ block_12_depthwise_BN[0][… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_12_project (Conv2D)     │ (None, 14, 14, 96)        │          55,296 │ block_12_depthwise_relu[0… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_12_project_BN           │ (None, 14, 14, 96)        │             384 │ block_12_project[0][0]     │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_12_add (Add)            │ (None, 14, 14, 96)        │               0 │ block_11_add[0][0],        │
+│                               │                           │                 │ block_12_project_BN[0][0]  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_13_expand (Conv2D)      │ (None, 14, 14, 576)       │          55,296 │ block_12_add[0][0]         │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_13_expand_BN            │ (None, 14, 14, 576)       │           2,304 │ block_13_expand[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_13_expand_relu (ReLU)   │ (None, 14, 14, 576)       │               0 │ block_13_expand_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_13_pad (ZeroPadding2D)  │ (None, 15, 15, 576)       │               0 │ block_13_expand_relu[0][0] │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_13_depthwise            │ (None, 7, 7, 576)         │           5,184 │ block_13_pad[0][0]         │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_13_depthwise_BN         │ (None, 7, 7, 576)         │           2,304 │ block_13_depthwise[0][0]   │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_13_depthwise_relu       │ (None, 7, 7, 576)         │               0 │ block_13_depthwise_BN[0][… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_13_project (Conv2D)     │ (None, 7, 7, 160)         │          92,160 │ block_13_depthwise_relu[0… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_13_project_BN           │ (None, 7, 7, 160)         │             640 │ block_13_project[0][0]     │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_14_expand (Conv2D)      │ (None, 7, 7, 960)         │         153,600 │ block_13_project_BN[0][0]  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_14_expand_BN            │ (None, 7, 7, 960)         │           3,840 │ block_14_expand[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_14_expand_relu (ReLU)   │ (None, 7, 7, 960)         │               0 │ block_14_expand_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_14_depthwise            │ (None, 7, 7, 960)         │           8,640 │ block_14_expand_relu[0][0] │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_14_depthwise_BN         │ (None, 7, 7, 960)         │           3,840 │ block_14_depthwise[0][0]   │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_14_depthwise_relu       │ (None, 7, 7, 960)         │               0 │ block_14_depthwise_BN[0][… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_14_project (Conv2D)     │ (None, 7, 7, 160)         │         153,600 │ block_14_depthwise_relu[0… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_14_project_BN           │ (None, 7, 7, 160)         │             640 │ block_14_project[0][0]     │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_14_add (Add)            │ (None, 7, 7, 160)         │               0 │ block_13_project_BN[0][0], │
+│                               │                           │                 │ block_14_project_BN[0][0]  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_15_expand (Conv2D)      │ (None, 7, 7, 960)         │         153,600 │ block_14_add[0][0]         │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_15_expand_BN            │ (None, 7, 7, 960)         │           3,840 │ block_15_expand[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_15_expand_relu (ReLU)   │ (None, 7, 7, 960)         │               0 │ block_15_expand_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_15_depthwise            │ (None, 7, 7, 960)         │           8,640 │ block_15_expand_relu[0][0] │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_15_depthwise_BN         │ (None, 7, 7, 960)         │           3,840 │ block_15_depthwise[0][0]   │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_15_depthwise_relu       │ (None, 7, 7, 960)         │               0 │ block_15_depthwise_BN[0][… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_15_project (Conv2D)     │ (None, 7, 7, 160)         │         153,600 │ block_15_depthwise_relu[0… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_15_project_BN           │ (None, 7, 7, 160)         │             640 │ block_15_project[0][0]     │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_15_add (Add)            │ (None, 7, 7, 160)         │               0 │ block_14_add[0][0],        │
+│                               │                           │                 │ block_15_project_BN[0][0]  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_16_expand (Conv2D)      │ (None, 7, 7, 960)         │         153,600 │ block_15_add[0][0]         │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_16_expand_BN            │ (None, 7, 7, 960)         │           3,840 │ block_16_expand[0][0]      │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_16_expand_relu (ReLU)   │ (None, 7, 7, 960)         │               0 │ block_16_expand_BN[0][0]   │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_16_depthwise            │ (None, 7, 7, 960)         │           8,640 │ block_16_expand_relu[0][0] │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_16_depthwise_BN         │ (None, 7, 7, 960)         │           3,840 │ block_16_depthwise[0][0]   │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_16_depthwise_relu       │ (None, 7, 7, 960)         │               0 │ block_16_depthwise_BN[0][… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_16_project (Conv2D)     │ (None, 7, 7, 320)         │         307,200 │ block_16_depthwise_relu[0… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ block_16_project_BN           │ (None, 7, 7, 320)         │           1,280 │ block_16_project[0][0]     │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ Conv_1 (Conv2D)               │ (None, 7, 7, 1280)        │         409,600 │ block_16_project_BN[0][0]  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ Conv_1_bn                     │ (None, 7, 7, 1280)        │           5,120 │ Conv_1[0][0]               │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ out_relu (ReLU)               │ (None, 7, 7, 1280)        │               0 │ Conv_1_bn[0][0]            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ global_average_pooling2d      │ (None, 1280)              │               0 │ out_relu[0][0]             │
+│ (GlobalAveragePooling2D)      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ dense (Dense)                 │ (None, 128)               │         163,968 │ global_average_pooling2d[… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ batch_normalization           │ (None, 128)               │             512 │ dense[0][0]                │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu (ReLU)                  │ (None, 128)               │               0 │ batch_normalization[0][0]  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ dropout (Dropout)             │ (None, 128)               │               0 │ re_lu[0][0]                │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ dense_1 (Dense)               │ (None, 64)                │           8,256 │ dropout[0][0]              │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ batch_normalization_1         │ (None, 64)                │             256 │ dense_1[0][0]              │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_1 (ReLU)                │ (None, 64)                │               0 │ batch_normalization_1[0][… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ dense_2 (Dense)               │ (None, 3)                 │             195 │ re_lu_1[0][0]              │
+└───────────────────────────────┴───────────────────────────┴─────────────────┴────────────────────────────┘
+ Total params: 2,776,779 (10.59 MB)
+ Trainable params: 172,803 (675.01 KB)
+ Non-trainable params: 2,258,368 (8.61 MB)
+ Optimizer params: 345,608 (1.32 MB)
+✅ Model successfully converted and saved as drowsiness_detector.keras
+/mnt/d/thien/model/mobilenetV2/mobilenetV2.py:90: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+
+
+Epoch 1/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 83s 336ms/step - accuracy: 0.5376 - loss: 0.9703 - val_accuracy: 0.7677 - val_loss: 0.6469
+Epoch 2/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 81s 334ms/step - accuracy: 0.7972 - loss: 0.5781 - val_accuracy: 0.8207 - val_loss: 0.4987
+Epoch 3/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 73s 304ms/step - accuracy: 0.8562 - loss: 0.4387 - val_accuracy: 0.8633 - val_loss: 0.4154
+Epoch 4/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 73s 304ms/step - accuracy: 0.8965 - loss: 0.3529 - val_accuracy: 0.8701 - val_loss: 0.3731
+Epoch 5/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 75s 309ms/step - accuracy: 0.9118 - loss: 0.3022 - val_accuracy: 0.8924 - val_loss: 0.3282
+Epoch 6/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 74s 307ms/step - accuracy: 0.9262 - loss: 0.2596 - val_accuracy: 0.9059 - val_loss: 0.3019
+Epoch 7/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 74s 309ms/step - accuracy: 0.9369 - loss: 0.2278 - val_accuracy: 0.9101 - val_loss: 0.2832
+Epoch 8/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 73s 304ms/step - accuracy: 0.9458 - loss: 0.2063 - val_accuracy: 0.9168 - val_loss: 0.2620
+Epoch 9/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 73s 304ms/step - accuracy: 0.9505 - loss: 0.1880 - val_accuracy: 0.9174 - val_loss: 0.2509
+Epoch 10/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 73s 305ms/step - accuracy: 0.9550 - loss: 0.1699 - val_accuracy: 0.9205 - val_loss: 0.2392
+Epoch 11/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 74s 307ms/step - accuracy: 0.9562 - loss: 0.1569 - val_accuracy: 0.9215 - val_loss: 0.2335
+Epoch 12/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 74s 309ms/step - accuracy: 0.9631 - loss: 0.1436 - val_accuracy: 0.9200 - val_loss: 0.2276
+Epoch 13/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 76s 316ms/step - accuracy: 0.9661 - loss: 0.1307 - val_accuracy: 0.9257 - val_loss: 0.2152
+Epoch 14/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 74s 308ms/step - accuracy: 0.9687 - loss: 0.1220 - val_accuracy: 0.9283 - val_loss: 0.2070
+Epoch 15/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 74s 307ms/step - accuracy: 0.9746 - loss: 0.1112 - val_accuracy: 0.9278 - val_loss: 0.2061
+Epoch 16/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 74s 307ms/step - accuracy: 0.9766 - loss: 0.1033 - val_accuracy: 0.9288 - val_loss: 0.2051
+Epoch 17/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 74s 307ms/step - accuracy: 0.9788 - loss: 0.0978 - val_accuracy: 0.9335 - val_loss: 0.1951
+Epoch 18/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 74s 306ms/step - accuracy: 0.9799 - loss: 0.0909 - val_accuracy: 0.9340 - val_loss: 0.1933
+Epoch 19/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 76s 317ms/step - accuracy: 0.9824 - loss: 0.0832 - val_accuracy: 0.9350 - val_loss: 0.1900
+Epoch 20/20
+241/241 ━━━━━━━━━━━━━━━━━━━━ 75s 309ms/step - accuracy: 0.9845 - loss: 0.0783 - val_accuracy: 0.9361 - val_loss: 0.1850
+Saved artifact at '/tmp/tmprlwyi6oa'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): TensorSpec(shape=(None, 224, 224, 3), dtype=tf.float32, name='keras_tensor')
+Output Type:
+  TensorSpec(shape=(None, 3), dtype=tf.float32, name=None)
+Captures:
+  139743799352432: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765369376: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765368320: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748024880: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765370080: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765313696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765373600: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765376064: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765371136: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765374832: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765365680: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765217872: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765378352: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765379584: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765217344: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765366208: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765224560: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765227200: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765223152: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765225088: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765380112: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751078480: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765230896: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765232128: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751077952: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765223504: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751084992: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751087632: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751083584: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751085520: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743765232656: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751091328: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751093968: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751089920: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751091856: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751083936: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751180832: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751183472: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751179424: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751181360: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751090272: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751188224: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751190864: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751186816: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751188752: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751179776: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751278080: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751280720: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751276672: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751278608: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751187168: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751286880: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751289520: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751285472: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751287408: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751277024: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751378496: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751382544: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751374624: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751387296: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751386240: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751388880: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751378672: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751386768: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743751285824: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750163968: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750166608: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750162560: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750164496: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750172416: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750171360: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750174000: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750169952: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750171888: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750162912: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750230384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750234432: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750226512: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750239888: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750238832: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750241472: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750230560: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750239360: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750170304: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750312304: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750314944: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750310896: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750312832: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750320752: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750319696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750322336: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750318288: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750320224: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750311248: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750395104: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750399152: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750391232: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750404608: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750403552: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750400384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750395280: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750404080: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750318640: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750493408: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750496048: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750492000: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750493936: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750503440: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750499920: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750499216: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750500624: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750503616: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750492352: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750575680: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750578320: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750574272: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750576208: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750583072: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750582016: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750584656: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750580608: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750582544: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750574624: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750671696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750674336: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750670288: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750672224: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750680320: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750679264: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750681904: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750677856: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750679792: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750670640: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750720144: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750722608: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750718032: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750721552: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750728592: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750727536: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750730176: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750726128: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750728064: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750732992: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750817040: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750816688: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750819328: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750818800: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750826016: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750824960: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750827600: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750823552: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750825488: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750830416: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748817312: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748816960: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743750829712: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748819072: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748826112: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748825056: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748827696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748823648: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748825584: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748830688: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748899408: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748830512: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748831744: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748898880: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748824000: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748906096: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748908736: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748904688: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748906624: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748904336: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748912960: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748912608: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749002112: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749007568: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749006512: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749009152: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743748998768: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749007040: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749004752: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749010384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749010560: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749011792: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749096016: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749005456: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749102528: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749105168: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749101120: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749103056: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749100768: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749109392: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749109040: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749198544: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749204000: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749202944: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749205584: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749195200: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749203472: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749194144: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749259856: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749259504: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749207872: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749261616: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749201888: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749269008: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749271648: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749267600: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749269536: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749262144: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749362032: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749365024: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749360800: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749370480: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749369424: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749372064: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749361152: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749369952: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749367664: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749441312: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749443424: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749439552: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749443072: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749450112: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749449056: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749451696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749447648: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749449584: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749439728: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749509312: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749455568: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749512304: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749517760: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749516704: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749519344: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749508432: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749517232: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749448000: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749606560: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749609200: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749605152: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749607088: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749615184: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749614128: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749616768: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749612720: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749614656: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749605504: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749722480: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749726528: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749718608: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749731984: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749730928: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749733568: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749722656: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749731456: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743749613072: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743746576752: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743746579392: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743746575344: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743746577280: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743746588016: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743746579216: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743746987232: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  139743746985296: TensorSpec(shape=(), dtype=tf.resource, name=None)
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1744608518.900789   57731 tf_tfl_flatbuffer_helpers.cc:365] Ignored output_format.
+W0000 00:00:1744608518.900895   57731 tf_tfl_flatbuffer_helpers.cc:368] Ignored drop_control_dependency.
+2025-04-14 12:28:38.901476: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: /tmp/tmprlwyi6oa
+2025-04-14 12:28:38.908739: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2025-04-14 12:28:38.908767: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: /tmp/tmprlwyi6oa
+I0000 00:00:1744608518.976187   57731 mlir_graph_optimization_pass.cc:425] MLIR V1 optimization pass is not enabled
+2025-04-14 12:28:38.988121: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2025-04-14 12:28:39.381306: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: /tmp/tmprlwyi6oa
+2025-04-14 12:28:39.489772: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 588262 microseconds.
+2025-04-14 12:28:39.615065: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+Model: "functional"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                  ┃ Output Shape              ┃         Param # ┃ Connected to               ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ input_layer (InputLayer)      │ (None, 224, 224, 3)       │               0 │ -                          │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ rescaling (Rescaling)         │ (None, 224, 224, 3)       │               0 │ input_layer[0][0]          │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ conv (Conv2D)                 │ (None, 112, 112, 16)      │             432 │ rescaling[0][0]            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ conv_bn (BatchNormalization)  │ (None, 112, 112, 16)      │              64 │ conv[0][0]                 │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation (Activation)       │ (None, 112, 112, 16)      │               0 │ conv_bn[0][0]              │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_depthwise       │ (None, 112, 112, 16)      │             144 │ activation[0][0]           │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_depthwise_bn    │ (None, 112, 112, 16)      │              64 │ expanded_conv_depthwise[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu (ReLU)                  │ (None, 112, 112, 16)      │               0 │ expanded_conv_depthwise_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_project         │ (None, 112, 112, 16)      │             256 │ re_lu[0][0]                │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_project_bn      │ (None, 112, 112, 16)      │              64 │ expanded_conv_project[0][… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_add (Add)       │ (None, 112, 112, 16)      │               0 │ activation[0][0],          │
+│                               │                           │                 │ expanded_conv_project_bn[… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_1_expand        │ (None, 112, 112, 64)      │           1,024 │ expanded_conv_add[0][0]    │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_1_expand_bn     │ (None, 112, 112, 64)      │             256 │ expanded_conv_1_expand[0]… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_1 (ReLU)                │ (None, 112, 112, 64)      │               0 │ expanded_conv_1_expand_bn… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_1_depthwise_pad │ (None, 113, 113, 64)      │               0 │ re_lu_1[0][0]              │
+│ (ZeroPadding2D)               │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_1_depthwise     │ (None, 56, 56, 64)        │             576 │ expanded_conv_1_depthwise… │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_1_depthwise_bn  │ (None, 56, 56, 64)        │             256 │ expanded_conv_1_depthwise… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_2 (ReLU)                │ (None, 56, 56, 64)        │               0 │ expanded_conv_1_depthwise… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_1_project       │ (None, 56, 56, 24)        │           1,536 │ re_lu_2[0][0]              │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_1_project_bn    │ (None, 56, 56, 24)        │              96 │ expanded_conv_1_project[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_2_expand        │ (None, 56, 56, 72)        │           1,728 │ expanded_conv_1_project_b… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_2_expand_bn     │ (None, 56, 56, 72)        │             288 │ expanded_conv_2_expand[0]… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_3 (ReLU)                │ (None, 56, 56, 72)        │               0 │ expanded_conv_2_expand_bn… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_2_depthwise     │ (None, 56, 56, 72)        │             648 │ re_lu_3[0][0]              │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_2_depthwise_bn  │ (None, 56, 56, 72)        │             288 │ expanded_conv_2_depthwise… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_4 (ReLU)                │ (None, 56, 56, 72)        │               0 │ expanded_conv_2_depthwise… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_2_project       │ (None, 56, 56, 24)        │           1,728 │ re_lu_4[0][0]              │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_2_project_bn    │ (None, 56, 56, 24)        │              96 │ expanded_conv_2_project[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_2_add (Add)     │ (None, 56, 56, 24)        │               0 │ expanded_conv_1_project_b… │
+│                               │                           │                 │ expanded_conv_2_project_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_expand        │ (None, 56, 56, 72)        │           1,728 │ expanded_conv_2_add[0][0]  │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_expand_bn     │ (None, 56, 56, 72)        │             288 │ expanded_conv_3_expand[0]… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_5 (ReLU)                │ (None, 56, 56, 72)        │               0 │ expanded_conv_3_expand_bn… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_depthwise_pad │ (None, 59, 59, 72)        │               0 │ re_lu_5[0][0]              │
+│ (ZeroPadding2D)               │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_depthwise     │ (None, 28, 28, 72)        │           1,800 │ expanded_conv_3_depthwise… │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_depthwise_bn  │ (None, 28, 28, 72)        │             288 │ expanded_conv_3_depthwise… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_6 (ReLU)                │ (None, 28, 28, 72)        │               0 │ expanded_conv_3_depthwise… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_squeeze_exci… │ (None, 1, 1, 72)          │               0 │ re_lu_6[0][0]              │
+│ (GlobalAveragePooling2D)      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_squeeze_exci… │ (None, 1, 1, 24)          │           1,752 │ expanded_conv_3_squeeze_e… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_squeeze_exci… │ (None, 1, 1, 24)          │               0 │ expanded_conv_3_squeeze_e… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_squeeze_exci… │ (None, 1, 1, 72)          │           1,800 │ expanded_conv_3_squeeze_e… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ add (Add)                     │ (None, 1, 1, 72)          │               0 │ expanded_conv_3_squeeze_e… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_7 (ReLU)                │ (None, 1, 1, 72)          │               0 │ add[0][0]                  │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ multiply (Multiply)           │ (None, 1, 1, 72)          │               0 │ re_lu_7[0][0]              │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_squeeze_exci… │ (None, 28, 28, 72)        │               0 │ re_lu_6[0][0],             │
+│ (Multiply)                    │                           │                 │ multiply[0][0]             │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_project       │ (None, 28, 28, 40)        │           2,880 │ expanded_conv_3_squeeze_e… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_3_project_bn    │ (None, 28, 28, 40)        │             160 │ expanded_conv_3_project[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_expand        │ (None, 28, 28, 120)       │           4,800 │ expanded_conv_3_project_b… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_expand_bn     │ (None, 28, 28, 120)       │             480 │ expanded_conv_4_expand[0]… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_8 (ReLU)                │ (None, 28, 28, 120)       │               0 │ expanded_conv_4_expand_bn… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_depthwise     │ (None, 28, 28, 120)       │           3,000 │ re_lu_8[0][0]              │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_depthwise_bn  │ (None, 28, 28, 120)       │             480 │ expanded_conv_4_depthwise… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_9 (ReLU)                │ (None, 28, 28, 120)       │               0 │ expanded_conv_4_depthwise… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_squeeze_exci… │ (None, 1, 1, 120)         │               0 │ re_lu_9[0][0]              │
+│ (GlobalAveragePooling2D)      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_squeeze_exci… │ (None, 1, 1, 32)          │           3,872 │ expanded_conv_4_squeeze_e… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_squeeze_exci… │ (None, 1, 1, 32)          │               0 │ expanded_conv_4_squeeze_e… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_squeeze_exci… │ (None, 1, 1, 120)         │           3,960 │ expanded_conv_4_squeeze_e… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ add_1 (Add)                   │ (None, 1, 1, 120)         │               0 │ expanded_conv_4_squeeze_e… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_10 (ReLU)               │ (None, 1, 1, 120)         │               0 │ add_1[0][0]                │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ multiply_1 (Multiply)         │ (None, 1, 1, 120)         │               0 │ re_lu_10[0][0]             │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_squeeze_exci… │ (None, 28, 28, 120)       │               0 │ re_lu_9[0][0],             │
+│ (Multiply)                    │                           │                 │ multiply_1[0][0]           │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_project       │ (None, 28, 28, 40)        │           4,800 │ expanded_conv_4_squeeze_e… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_project_bn    │ (None, 28, 28, 40)        │             160 │ expanded_conv_4_project[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_4_add (Add)     │ (None, 28, 28, 40)        │               0 │ expanded_conv_3_project_b… │
+│                               │                           │                 │ expanded_conv_4_project_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_expand        │ (None, 28, 28, 120)       │           4,800 │ expanded_conv_4_add[0][0]  │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_expand_bn     │ (None, 28, 28, 120)       │             480 │ expanded_conv_5_expand[0]… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_11 (ReLU)               │ (None, 28, 28, 120)       │               0 │ expanded_conv_5_expand_bn… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_depthwise     │ (None, 28, 28, 120)       │           3,000 │ re_lu_11[0][0]             │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_depthwise_bn  │ (None, 28, 28, 120)       │             480 │ expanded_conv_5_depthwise… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_12 (ReLU)               │ (None, 28, 28, 120)       │               0 │ expanded_conv_5_depthwise… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_squeeze_exci… │ (None, 1, 1, 120)         │               0 │ re_lu_12[0][0]             │
+│ (GlobalAveragePooling2D)      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_squeeze_exci… │ (None, 1, 1, 32)          │           3,872 │ expanded_conv_5_squeeze_e… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_squeeze_exci… │ (None, 1, 1, 32)          │               0 │ expanded_conv_5_squeeze_e… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_squeeze_exci… │ (None, 1, 1, 120)         │           3,960 │ expanded_conv_5_squeeze_e… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ add_2 (Add)                   │ (None, 1, 1, 120)         │               0 │ expanded_conv_5_squeeze_e… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_13 (ReLU)               │ (None, 1, 1, 120)         │               0 │ add_2[0][0]                │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ multiply_2 (Multiply)         │ (None, 1, 1, 120)         │               0 │ re_lu_13[0][0]             │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_squeeze_exci… │ (None, 28, 28, 120)       │               0 │ re_lu_12[0][0],            │
+│ (Multiply)                    │                           │                 │ multiply_2[0][0]           │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_project       │ (None, 28, 28, 40)        │           4,800 │ expanded_conv_5_squeeze_e… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_project_bn    │ (None, 28, 28, 40)        │             160 │ expanded_conv_5_project[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_5_add (Add)     │ (None, 28, 28, 40)        │               0 │ expanded_conv_4_add[0][0], │
+│                               │                           │                 │ expanded_conv_5_project_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_6_expand        │ (None, 28, 28, 240)       │           9,600 │ expanded_conv_5_add[0][0]  │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_6_expand_bn     │ (None, 28, 28, 240)       │             960 │ expanded_conv_6_expand[0]… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_1 (Activation)     │ (None, 28, 28, 240)       │               0 │ expanded_conv_6_expand_bn… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_6_depthwise_pad │ (None, 29, 29, 240)       │               0 │ activation_1[0][0]         │
+│ (ZeroPadding2D)               │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_6_depthwise     │ (None, 14, 14, 240)       │           2,160 │ expanded_conv_6_depthwise… │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_6_depthwise_bn  │ (None, 14, 14, 240)       │             960 │ expanded_conv_6_depthwise… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_2 (Activation)     │ (None, 14, 14, 240)       │               0 │ expanded_conv_6_depthwise… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_6_project       │ (None, 14, 14, 80)        │          19,200 │ activation_2[0][0]         │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_6_project_bn    │ (None, 14, 14, 80)        │             320 │ expanded_conv_6_project[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_7_expand        │ (None, 14, 14, 200)       │          16,000 │ expanded_conv_6_project_b… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_7_expand_bn     │ (None, 14, 14, 200)       │             800 │ expanded_conv_7_expand[0]… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_3 (Activation)     │ (None, 14, 14, 200)       │               0 │ expanded_conv_7_expand_bn… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_7_depthwise     │ (None, 14, 14, 200)       │           1,800 │ activation_3[0][0]         │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_7_depthwise_bn  │ (None, 14, 14, 200)       │             800 │ expanded_conv_7_depthwise… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_4 (Activation)     │ (None, 14, 14, 200)       │               0 │ expanded_conv_7_depthwise… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_7_project       │ (None, 14, 14, 80)        │          16,000 │ activation_4[0][0]         │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_7_project_bn    │ (None, 14, 14, 80)        │             320 │ expanded_conv_7_project[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_7_add (Add)     │ (None, 14, 14, 80)        │               0 │ expanded_conv_6_project_b… │
+│                               │                           │                 │ expanded_conv_7_project_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_8_expand        │ (None, 14, 14, 184)       │          14,720 │ expanded_conv_7_add[0][0]  │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_8_expand_bn     │ (None, 14, 14, 184)       │             736 │ expanded_conv_8_expand[0]… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_5 (Activation)     │ (None, 14, 14, 184)       │               0 │ expanded_conv_8_expand_bn… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_8_depthwise     │ (None, 14, 14, 184)       │           1,656 │ activation_5[0][0]         │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_8_depthwise_bn  │ (None, 14, 14, 184)       │             736 │ expanded_conv_8_depthwise… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_6 (Activation)     │ (None, 14, 14, 184)       │               0 │ expanded_conv_8_depthwise… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_8_project       │ (None, 14, 14, 80)        │          14,720 │ activation_6[0][0]         │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_8_project_bn    │ (None, 14, 14, 80)        │             320 │ expanded_conv_8_project[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_8_add (Add)     │ (None, 14, 14, 80)        │               0 │ expanded_conv_7_add[0][0], │
+│                               │                           │                 │ expanded_conv_8_project_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_9_expand        │ (None, 14, 14, 184)       │          14,720 │ expanded_conv_8_add[0][0]  │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_9_expand_bn     │ (None, 14, 14, 184)       │             736 │ expanded_conv_9_expand[0]… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_7 (Activation)     │ (None, 14, 14, 184)       │               0 │ expanded_conv_9_expand_bn… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_9_depthwise     │ (None, 14, 14, 184)       │           1,656 │ activation_7[0][0]         │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_9_depthwise_bn  │ (None, 14, 14, 184)       │             736 │ expanded_conv_9_depthwise… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_8 (Activation)     │ (None, 14, 14, 184)       │               0 │ expanded_conv_9_depthwise… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_9_project       │ (None, 14, 14, 80)        │          14,720 │ activation_8[0][0]         │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_9_project_bn    │ (None, 14, 14, 80)        │             320 │ expanded_conv_9_project[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_9_add (Add)     │ (None, 14, 14, 80)        │               0 │ expanded_conv_8_add[0][0], │
+│                               │                           │                 │ expanded_conv_9_project_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_10_expand       │ (None, 14, 14, 480)       │          38,400 │ expanded_conv_9_add[0][0]  │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_10_expand_bn    │ (None, 14, 14, 480)       │           1,920 │ expanded_conv_10_expand[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_9 (Activation)     │ (None, 14, 14, 480)       │               0 │ expanded_conv_10_expand_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_10_depthwise    │ (None, 14, 14, 480)       │           4,320 │ activation_9[0][0]         │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_10_depthwise_bn │ (None, 14, 14, 480)       │           1,920 │ expanded_conv_10_depthwis… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_10 (Activation)    │ (None, 14, 14, 480)       │               0 │ expanded_conv_10_depthwis… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_10_squeeze_exc… │ (None, 1, 1, 480)         │               0 │ activation_10[0][0]        │
+│ (GlobalAveragePooling2D)      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_10_squeeze_exc… │ (None, 1, 1, 120)         │          57,720 │ expanded_conv_10_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_10_squeeze_exc… │ (None, 1, 1, 120)         │               0 │ expanded_conv_10_squeeze_… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_10_squeeze_exc… │ (None, 1, 1, 480)         │          58,080 │ expanded_conv_10_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ add_3 (Add)                   │ (None, 1, 1, 480)         │               0 │ expanded_conv_10_squeeze_… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_14 (ReLU)               │ (None, 1, 1, 480)         │               0 │ add_3[0][0]                │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ multiply_3 (Multiply)         │ (None, 1, 1, 480)         │               0 │ re_lu_14[0][0]             │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_10_squeeze_exc… │ (None, 14, 14, 480)       │               0 │ activation_10[0][0],       │
+│ (Multiply)                    │                           │                 │ multiply_3[0][0]           │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_10_project      │ (None, 14, 14, 112)       │          53,760 │ expanded_conv_10_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_10_project_bn   │ (None, 14, 14, 112)       │             448 │ expanded_conv_10_project[… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_expand       │ (None, 14, 14, 672)       │          75,264 │ expanded_conv_10_project_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_expand_bn    │ (None, 14, 14, 672)       │           2,688 │ expanded_conv_11_expand[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_11 (Activation)    │ (None, 14, 14, 672)       │               0 │ expanded_conv_11_expand_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_depthwise    │ (None, 14, 14, 672)       │           6,048 │ activation_11[0][0]        │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_depthwise_bn │ (None, 14, 14, 672)       │           2,688 │ expanded_conv_11_depthwis… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_12 (Activation)    │ (None, 14, 14, 672)       │               0 │ expanded_conv_11_depthwis… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_squeeze_exc… │ (None, 1, 1, 672)         │               0 │ activation_12[0][0]        │
+│ (GlobalAveragePooling2D)      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_squeeze_exc… │ (None, 1, 1, 168)         │         113,064 │ expanded_conv_11_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_squeeze_exc… │ (None, 1, 1, 168)         │               0 │ expanded_conv_11_squeeze_… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_squeeze_exc… │ (None, 1, 1, 672)         │         113,568 │ expanded_conv_11_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ add_4 (Add)                   │ (None, 1, 1, 672)         │               0 │ expanded_conv_11_squeeze_… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_15 (ReLU)               │ (None, 1, 1, 672)         │               0 │ add_4[0][0]                │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ multiply_4 (Multiply)         │ (None, 1, 1, 672)         │               0 │ re_lu_15[0][0]             │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_squeeze_exc… │ (None, 14, 14, 672)       │               0 │ activation_12[0][0],       │
+│ (Multiply)                    │                           │                 │ multiply_4[0][0]           │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_project      │ (None, 14, 14, 112)       │          75,264 │ expanded_conv_11_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_project_bn   │ (None, 14, 14, 112)       │             448 │ expanded_conv_11_project[… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_11_add (Add)    │ (None, 14, 14, 112)       │               0 │ expanded_conv_10_project_… │
+│                               │                           │                 │ expanded_conv_11_project_… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_expand       │ (None, 14, 14, 672)       │          75,264 │ expanded_conv_11_add[0][0] │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_expand_bn    │ (None, 14, 14, 672)       │           2,688 │ expanded_conv_12_expand[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_13 (Activation)    │ (None, 14, 14, 672)       │               0 │ expanded_conv_12_expand_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_depthwise_p… │ (None, 17, 17, 672)       │               0 │ activation_13[0][0]        │
+│ (ZeroPadding2D)               │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_depthwise    │ (None, 7, 7, 672)         │          16,800 │ expanded_conv_12_depthwis… │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_depthwise_bn │ (None, 7, 7, 672)         │           2,688 │ expanded_conv_12_depthwis… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_14 (Activation)    │ (None, 7, 7, 672)         │               0 │ expanded_conv_12_depthwis… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_squeeze_exc… │ (None, 1, 1, 672)         │               0 │ activation_14[0][0]        │
+│ (GlobalAveragePooling2D)      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_squeeze_exc… │ (None, 1, 1, 168)         │         113,064 │ expanded_conv_12_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_squeeze_exc… │ (None, 1, 1, 168)         │               0 │ expanded_conv_12_squeeze_… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_squeeze_exc… │ (None, 1, 1, 672)         │         113,568 │ expanded_conv_12_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ add_5 (Add)                   │ (None, 1, 1, 672)         │               0 │ expanded_conv_12_squeeze_… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_16 (ReLU)               │ (None, 1, 1, 672)         │               0 │ add_5[0][0]                │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ multiply_5 (Multiply)         │ (None, 1, 1, 672)         │               0 │ re_lu_16[0][0]             │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_squeeze_exc… │ (None, 7, 7, 672)         │               0 │ activation_14[0][0],       │
+│ (Multiply)                    │                           │                 │ multiply_5[0][0]           │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_project      │ (None, 7, 7, 160)         │         107,520 │ expanded_conv_12_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_12_project_bn   │ (None, 7, 7, 160)         │             640 │ expanded_conv_12_project[… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_expand       │ (None, 7, 7, 960)         │         153,600 │ expanded_conv_12_project_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_expand_bn    │ (None, 7, 7, 960)         │           3,840 │ expanded_conv_13_expand[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_15 (Activation)    │ (None, 7, 7, 960)         │               0 │ expanded_conv_13_expand_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_depthwise    │ (None, 7, 7, 960)         │          24,000 │ activation_15[0][0]        │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_depthwise_bn │ (None, 7, 7, 960)         │           3,840 │ expanded_conv_13_depthwis… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_16 (Activation)    │ (None, 7, 7, 960)         │               0 │ expanded_conv_13_depthwis… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_squeeze_exc… │ (None, 1, 1, 960)         │               0 │ activation_16[0][0]        │
+│ (GlobalAveragePooling2D)      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_squeeze_exc… │ (None, 1, 1, 240)         │         230,640 │ expanded_conv_13_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_squeeze_exc… │ (None, 1, 1, 240)         │               0 │ expanded_conv_13_squeeze_… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_squeeze_exc… │ (None, 1, 1, 960)         │         231,360 │ expanded_conv_13_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ add_6 (Add)                   │ (None, 1, 1, 960)         │               0 │ expanded_conv_13_squeeze_… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_17 (ReLU)               │ (None, 1, 1, 960)         │               0 │ add_6[0][0]                │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ multiply_6 (Multiply)         │ (None, 1, 1, 960)         │               0 │ re_lu_17[0][0]             │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_squeeze_exc… │ (None, 7, 7, 960)         │               0 │ activation_16[0][0],       │
+│ (Multiply)                    │                           │                 │ multiply_6[0][0]           │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_project      │ (None, 7, 7, 160)         │         153,600 │ expanded_conv_13_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_project_bn   │ (None, 7, 7, 160)         │             640 │ expanded_conv_13_project[… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_13_add (Add)    │ (None, 7, 7, 160)         │               0 │ expanded_conv_12_project_… │
+│                               │                           │                 │ expanded_conv_13_project_… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_expand       │ (None, 7, 7, 960)         │         153,600 │ expanded_conv_13_add[0][0] │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_expand_bn    │ (None, 7, 7, 960)         │           3,840 │ expanded_conv_14_expand[0… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_17 (Activation)    │ (None, 7, 7, 960)         │               0 │ expanded_conv_14_expand_b… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_depthwise    │ (None, 7, 7, 960)         │          24,000 │ activation_17[0][0]        │
+│ (DepthwiseConv2D)             │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_depthwise_bn │ (None, 7, 7, 960)         │           3,840 │ expanded_conv_14_depthwis… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_18 (Activation)    │ (None, 7, 7, 960)         │               0 │ expanded_conv_14_depthwis… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_squeeze_exc… │ (None, 1, 1, 960)         │               0 │ activation_18[0][0]        │
+│ (GlobalAveragePooling2D)      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_squeeze_exc… │ (None, 1, 1, 240)         │         230,640 │ expanded_conv_14_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_squeeze_exc… │ (None, 1, 1, 240)         │               0 │ expanded_conv_14_squeeze_… │
+│ (ReLU)                        │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_squeeze_exc… │ (None, 1, 1, 960)         │         231,360 │ expanded_conv_14_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ add_7 (Add)                   │ (None, 1, 1, 960)         │               0 │ expanded_conv_14_squeeze_… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ re_lu_18 (ReLU)               │ (None, 1, 1, 960)         │               0 │ add_7[0][0]                │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ multiply_7 (Multiply)         │ (None, 1, 1, 960)         │               0 │ re_lu_18[0][0]             │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_squeeze_exc… │ (None, 7, 7, 960)         │               0 │ activation_18[0][0],       │
+│ (Multiply)                    │                           │                 │ multiply_7[0][0]           │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_project      │ (None, 7, 7, 160)         │         153,600 │ expanded_conv_14_squeeze_… │
+│ (Conv2D)                      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_project_bn   │ (None, 7, 7, 160)         │             640 │ expanded_conv_14_project[… │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ expanded_conv_14_add (Add)    │ (None, 7, 7, 160)         │               0 │ expanded_conv_13_add[0][0… │
+│                               │                           │                 │ expanded_conv_14_project_… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ conv_1 (Conv2D)               │ (None, 7, 7, 960)         │         153,600 │ expanded_conv_14_add[0][0] │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ conv_1_bn                     │ (None, 7, 7, 960)         │           3,840 │ conv_1[0][0]               │
+│ (BatchNormalization)          │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ activation_19 (Activation)    │ (None, 7, 7, 960)         │               0 │ conv_1_bn[0][0]            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ global_average_pooling2d      │ (None, 960)               │               0 │ activation_19[0][0]        │
+│ (GlobalAveragePooling2D)      │                           │                 │                            │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ dense (Dense)                 │ (None, 128)               │         123,008 │ global_average_pooling2d[… │
+├───────────────────────────────┼───────────────────────────┼─────────────────┼────────────────────────────┤
+│ dense_1 (Dense)               │ (None, 3)                 │             387 │ dense[0][0]                │
+└───────────────────────────────┴───────────────────────────┴─────────────────┴────────────────────────────┘
+ Total params: 3,366,539 (12.84 MB)
+ Trainable params: 123,395 (482.01 KB)
+ Non-trainable params: 2,996,352 (11.43 MB)
+ Optimizer params: 246,792 (964.04 KB)
+✅ Model successfully converted and saved as drowsiness_detector.keras
+Traceback (most recent call last):
+  File "/mnt/d/thien/model/mobilenetV3/mobilenetV3.py", line 101, in <module>
+    plt.plot(history.history['accuracy'], label='Train Accuracy')
+NameError: name 'plt' is not defined
