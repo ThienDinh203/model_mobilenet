@@ -12,7 +12,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 # ======= Config =======
 IMG_SIZE = 224
 BATCH_SIZE = 32
-EPOCHS = 20
+EPOCHS = 45
 dataset_path = "../face_dataset_224_augment"  # change to your path
 
 # ======= Load Dataset =======
@@ -51,13 +51,29 @@ base_model.trainable = False  # Freeze feature extractor
 
 x = base_model.output
 x = GlobalAveragePooling2D()(x)
+
+x = Dense(256)(x)
+x = tf.keras.layers.BatchNormalization()(x)
+x = tf.keras.layers.ReLU()(x)
+x = tf.keras.layers.Dropout(0.4)(x)
+
+x = Dense(128)(x)
+x = tf.keras.layers.BatchNormalization()(x)
+x = tf.keras.layers.ReLU()(x)
+x = tf.keras.layers.Dropout(0.3)(x)
+
+x = Dense(64)(x)
+x = tf.keras.layers.BatchNormalization()(x)
+x = tf.keras.layers.ReLU()(x)
+x = tf.keras.layers.Dropout(0.2)(x)
+
 x = Dense(128, activation='relu')(x)
 output = Dense(3, activation='softmax')(x)  # 3 classes
 
 model = Model(inputs=base_model.input, outputs=output)
 
 # ======= Compile Model =======
-model.compile(optimizer=tf.keras.optimizers.Adam(1e-4),
+model.compile(optimizer=tf.keras.optimizers.Adam(1e-5),
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 

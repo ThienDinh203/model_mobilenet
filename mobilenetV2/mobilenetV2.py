@@ -12,7 +12,7 @@ dataset_path = "../face_dataset_224_augment"  # same as your PyTorch path
 
 IMG_SIZE = 224
 BATCH_SIZE = 32
-EPOCHS = 20
+EPOCHS = 30
 
 # Load and split dataset
 train_ds = image_dataset_from_directory(
@@ -46,13 +46,22 @@ base_model.trainable = False  # freeze for now
 
 x = base_model.output
 x = GlobalAveragePooling2D()(x)
+
+x = Dense(256)(x)
+x = BatchNormalization()(x)
+x = tf.keras.layers.ReLU()(x)
+x = Dropout(0.4)(x)
+
 x = Dense(128)(x)
 x = BatchNormalization()(x)
 x = tf.keras.layers.ReLU()(x)
 x = Dropout(0.3)(x)
+
 x = Dense(64)(x)
 x = BatchNormalization()(x)
 x = tf.keras.layers.ReLU()(x)
+x = Dropout(0.2)(x)
+
 output = Dense(3, activation='softmax')(x)
 
 model = Model(inputs=base_model.input, outputs=output)
@@ -76,7 +85,7 @@ converter.target_spec.supported_types = [tf.float16]
 tflite_model = converter.convert()
 
 # Save the .tflite file
-tflite_model_path = "model.tflite"
+tflite_model_path = "model40.tflite"
 with open(tflite_model_path, "wb") as f:
     f.write(tflite_model)
 
