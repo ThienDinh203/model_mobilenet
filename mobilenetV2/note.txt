@@ -1,3 +1,349 @@
+dinhthien@DESKTOP-9O4K9B3:/mnt/d/thien/model/model_mobilenet/mobilenetV2(master)$ python3 mobilenetV2_hybrid.py 
+/home/dinhthien/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/dinhthien/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=MobileNet_V2_Weights.IMAGENET1K_V1`. You can also use `weights=MobileNet_V2_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+CustomModel(
+  (backbone): Sequential(
+    (0): Conv2dNormActivation(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+    )
+    (1): InvertedResidual(
+      (conv): Sequential(
+        (0): Conv2dNormActivation(
+          (0): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=32, bias=False)
+          (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU6(inplace=True)
+        )
+        (1): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (2): InvertedResidual(
+      (conv): Sequential(
+        (0): Conv2dNormActivation(
+          (0): Conv2d(16, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU6(inplace=True)
+        )
+        (1): Conv2dNormActivation(
+          (0): Conv2d(96, 96, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=96, bias=False)
+          (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU6(inplace=True)
+        )
+        (2): Conv2d(96, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (3): InvertedResidual(
+      (conv): Sequential(
+        (0): Conv2dNormActivation(
+          (0): Conv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU6(inplace=True)
+        )
+        (1): Conv2dNormActivation(
+          (0): Conv2d(144, 144, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=144, bias=False)
+          (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU6(inplace=True)
+        )
+        (2): Conv2d(144, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (4): InvertedResidual(
+      (conv): Sequential(
+        (0): Conv2dNormActivation(
+          (0): Conv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU6(inplace=True)
+        )
+        (1): Conv2dNormActivation(
+          (0): Conv2d(144, 144, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=144, bias=False)
+          (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU6(inplace=True)
+        )
+        (2): Conv2d(144, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (5): InvertedResidual(
+      (conv): Sequential(
+        (0): Conv2dNormActivation(
+          (0): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU6(inplace=True)
+        )
+        (1): Conv2dNormActivation(
+          (0): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+          (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU6(inplace=True)
+        )
+        (2): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (se_block): SEBlock(
+    (global_avg_pool): AdaptiveAvgPool2d(output_size=1)
+    (fc): Sequential(
+      (0): Linear(in_features=32, out_features=2, bias=False)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=2, out_features=32, bias=False)
+      (3): Sigmoid()
+    )
+  )
+  (inverted_residual1): InvertedResidual(
+    (conv): Sequential(
+      (0): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+      (4): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU6(inplace=True)
+      (6): Conv2d(192, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (7): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (inverted_residual2): InvertedResidual(
+    (conv): Sequential(
+      (0): Conv2d(128, 768, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): Conv2d(768, 768, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=768, bias=False)
+      (4): BatchNorm2d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU6(inplace=True)
+      (6): Conv2d(768, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (7): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (resnet_basic1): ResNetBasicBlock(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (downsample): Sequential(
+      (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (resnet_basic2): ResNetBasicBlock(
+    (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (resnet_bottleneck1): ResNetBottleneck(
+    (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+  )
+  (resnet_bottleneck2): ResNetBottleneck(
+    (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+  )
+  (convnext_block): ConvNeXtBlock(
+    (conv): Sequential(
+      (0): Conv2d(256, 256, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3), groups=256)
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1))
+      (3): GELU(approximate='none')
+      (4): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (classifier): Sequential(
+    (0): Flatten(start_dim=1, end_dim=-1)
+    (1): Linear(in_features=256, out_features=512, bias=True)
+    (2): ReLU()
+    (3): Dropout(p=0.3, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+    (5): ReLU()
+    (6): Dropout(p=0.3, inplace=False)
+    (7): Linear(in_features=256, out_features=3, bias=True)
+  )
+)
+/mnt/d/thien/model/model_mobilenet/mobilenetV2/mobilenetV2_hybrid.py:222: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler()
+/mnt/d/thien/model/model_mobilenet/mobilenetV2/mobilenetV2_hybrid.py:232: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Epoch 1/50: Train Loss: 0.7649, Train Acc: 65.71% | Val Loss: 0.3883, Val Acc: 86.26%
+Epoch 2/50: Train Loss: 0.3200, Train Acc: 88.39% | Val Loss: 0.1573, Val Acc: 94.55%
+Epoch 3/50: Train Loss: 0.2012, Train Acc: 92.68% | Val Loss: 0.1080, Val Acc: 96.08%
+Epoch 4/50: Train Loss: 0.1404, Train Acc: 94.78% | Val Loss: 0.1111, Val Acc: 95.99%
+Epoch 5/50: Train Loss: 0.1030, Train Acc: 96.24% | Val Loss: 0.0775, Val Acc: 96.89%
+Epoch 6/50: Train Loss: 0.0870, Train Acc: 96.89% | Val Loss: 0.0654, Val Acc: 97.39%
+Epoch 7/50: Train Loss: 0.0782, Train Acc: 97.16% | Val Loss: 0.0644, Val Acc: 97.12%
+Epoch 8/50: Train Loss: 0.0598, Train Acc: 97.91% | Val Loss: 0.2128, Val Acc: 92.88%
+Epoch 9/50: Train Loss: 0.0611, Train Acc: 97.94% | Val Loss: 0.0864, Val Acc: 97.16%
+Epoch 10/50: Train Loss: 0.0444, Train Acc: 98.37% | Val Loss: 0.0553, Val Acc: 97.61%
+Epoch 11/50: Train Loss: 0.0357, Train Acc: 98.58% | Val Loss: 0.0589, Val Acc: 97.93%
+Epoch 12/50: Train Loss: 0.0341, Train Acc: 98.91% | Val Loss: 0.0477, Val Acc: 98.06%
+Epoch 13/50: Train Loss: 0.0352, Train Acc: 98.81% | Val Loss: 0.0511, Val Acc: 98.15%
+Epoch 14/50: Train Loss: 0.0256, Train Acc: 99.09% | Val Loss: 0.0613, Val Acc: 97.97%
+Epoch 15/50: Train Loss: 0.0234, Train Acc: 99.19% | Val Loss: 0.0524, Val Acc: 98.29%
+Epoch 16/50: Train Loss: 0.0109, Train Acc: 99.61% | Val Loss: 0.0419, Val Acc: 98.42%
+Epoch 17/50: Train Loss: 0.0215, Train Acc: 99.28% | Val Loss: 0.0471, Val Acc: 98.33%
+Epoch 18/50: Train Loss: 0.0143, Train Acc: 99.55% | Val Loss: 0.1299, Val Acc: 96.85%
+Epoch 19/50: Train Loss: 0.0151, Train Acc: 99.53% | Val Loss: 0.0577, Val Acc: 98.20%
+Epoch 20/50: Train Loss: 0.0088, Train Acc: 99.74% | Val Loss: 0.0475, Val Acc: 98.24%
+Epoch 21/50: Train Loss: 0.0039, Train Acc: 99.92% | Val Loss: 0.0662, Val Acc: 98.33%
+Epoch 22/50: Train Loss: 0.0068, Train Acc: 99.79% | Val Loss: 0.0555, Val Acc: 98.56%
+Epoch 23/50: Train Loss: 0.0056, Train Acc: 99.82% | Val Loss: 0.0449, Val Acc: 98.60%
+Epoch 24/50: Train Loss: 0.0043, Train Acc: 99.84% | Val Loss: 0.0408, Val Acc: 98.56%
+Epoch 25/50: Train Loss: 0.0032, Train Acc: 99.92% | Val Loss: 0.0667, Val Acc: 97.97%
+Epoch 26/50: Train Loss: 0.0024, Train Acc: 99.92% | Val Loss: 0.0579, Val Acc: 98.60%
+Epoch 27/50: Train Loss: 0.0022, Train Acc: 99.95% | Val Loss: 0.0916, Val Acc: 98.20%
+Epoch 28/50: Train Loss: 0.0033, Train Acc: 99.89% | Val Loss: 0.0835, Val Acc: 98.69%
+Epoch 29/50: Train Loss: 0.0002, Train Acc: 100.00% | Val Loss: 0.0814, Val Acc: 98.60%
+Epoch 30/50: Train Loss: 0.0012, Train Acc: 99.95% | Val Loss: 0.0749, Val Acc: 98.42%
+Epoch 31/50: Train Loss: 0.0013, Train Acc: 99.99% | Val Loss: 0.0680, Val Acc: 98.56%
+Epoch 32/50: Train Loss: 0.0015, Train Acc: 99.95% | Val Loss: 0.0585, Val Acc: 98.65%
+Epoch 33/50: Train Loss: 0.0027, Train Acc: 99.93% | Val Loss: 0.0603, Val Acc: 98.51%
+Epoch 34/50: Train Loss: 0.0004, Train Acc: 100.00% | Val Loss: 0.0647, Val Acc: 98.56%
+Epoch 35/50: Train Loss: 0.0012, Train Acc: 99.97% | Val Loss: 0.0421, Val Acc: 98.69%
+Epoch 36/50: Train Loss: 0.0010, Train Acc: 99.95% | Val Loss: 0.0620, Val Acc: 98.65%
+Epoch 37/50: Train Loss: 0.0005, Train Acc: 99.98% | Val Loss: 0.0675, Val Acc: 98.69%
+Epoch 38/50: Train Loss: 0.0004, Train Acc: 99.98% | Val Loss: 0.0687, Val Acc: 98.56%
+Epoch 39/50: Train Loss: 0.0011, Train Acc: 99.95% | Val Loss: 0.0541, Val Acc: 98.74%
+Epoch 40/50: Train Loss: 0.0002, Train Acc: 99.99% | Val Loss: 0.0570, Val Acc: 98.74%
+Epoch 41/50: Train Loss: 0.0001, Train Acc: 100.00% | Val Loss: 0.0556, Val Acc: 98.65%
+Epoch 42/50: Train Loss: 0.0001, Train Acc: 100.00% | Val Loss: 0.0536, Val Acc: 98.78%
+Epoch 43/50: Train Loss: 0.0002, Train Acc: 99.99% | Val Loss: 0.0741, Val Acc: 98.74%
+Epoch 44/50: Train Loss: 0.0008, Train Acc: 99.99% | Val Loss: 0.0585, Val Acc: 98.78%
+Epoch 45/50: Train Loss: 0.0010, Train Acc: 99.99% | Val Loss: 0.0661, Val Acc: 98.74%
+Epoch 46/50: Train Loss: 0.0000, Train Acc: 100.00% | Val Loss: 0.0569, Val Acc: 98.65%
+Epoch 47/50: Train Loss: 0.0010, Train Acc: 99.98% | Val Loss: 0.0817, Val Acc: 98.69%
+Epoch 48/50: Train Loss: 0.0000, Train Acc: 100.00% | Val Loss: 0.0690, Val Acc: 98.78%
+Epoch 49/50: Train Loss: 0.0001, Train Acc: 100.00% | Val Loss: 0.0793, Val Acc: 98.74%
+Epoch 50/50: Train Loss: 0.0001, Train Acc: 99.99% | Val Loss: 0.0730, Val Acc: 98.74%
+====================================================================================================
+Layer (type:depth-idx)                             Output Shape              Param #
+====================================================================================================
+CustomModel                                        [1, 3]                    --
+├─Sequential: 1-1                                  [1, 32, 28, 28]           --
+│    └─Conv2dNormActivation: 2-1                   [1, 32, 112, 112]         --
+│    │    └─Conv2d: 3-1                            [1, 32, 112, 112]         (864)
+│    │    └─BatchNorm2d: 3-2                       [1, 32, 112, 112]         (64)
+│    │    └─ReLU6: 3-3                             [1, 32, 112, 112]         --
+│    └─InvertedResidual: 2-2                       [1, 16, 112, 112]         --
+│    │    └─Sequential: 3-4                        [1, 16, 112, 112]         (896)
+│    └─InvertedResidual: 2-3                       [1, 24, 56, 56]           --
+│    │    └─Sequential: 3-5                        [1, 24, 56, 56]           (5,136)
+│    └─InvertedResidual: 2-4                       [1, 24, 56, 56]           --
+│    │    └─Sequential: 3-6                        [1, 24, 56, 56]           (8,832)
+│    └─InvertedResidual: 2-5                       [1, 32, 28, 28]           --
+│    │    └─Sequential: 3-7                        [1, 32, 28, 28]           (10,000)
+│    └─InvertedResidual: 2-6                       [1, 32, 28, 28]           --
+│    │    └─Sequential: 3-8                        [1, 32, 28, 28]           (14,848)
+├─SEBlock: 1-2                                     [1, 32, 28, 28]           --
+│    └─AdaptiveAvgPool2d: 2-7                      [1, 32, 1, 1]             --
+│    └─Sequential: 2-8                             [1, 32]                   --
+│    │    └─Linear: 3-9                            [1, 2]                    64
+│    │    └─ReLU: 3-10                             [1, 2]                    --
+│    │    └─Linear: 3-11                           [1, 32]                   64
+│    │    └─Sigmoid: 3-12                          [1, 32]                   --
+├─InvertedResidual: 1-3                            [1, 128, 28, 28]          --
+│    └─Sequential: 2-9                             [1, 128, 28, 28]          --
+│    │    └─Conv2d: 3-13                           [1, 192, 28, 28]          6,144
+│    │    └─BatchNorm2d: 3-14                      [1, 192, 28, 28]          384
+│    │    └─ReLU6: 3-15                            [1, 192, 28, 28]          --
+│    │    └─Conv2d: 3-16                           [1, 192, 28, 28]          1,728
+│    │    └─BatchNorm2d: 3-17                      [1, 192, 28, 28]          384
+│    │    └─ReLU6: 3-18                            [1, 192, 28, 28]          --
+│    │    └─Conv2d: 3-19                           [1, 128, 28, 28]          24,576
+│    │    └─BatchNorm2d: 3-20                      [1, 128, 28, 28]          256
+├─InvertedResidual: 1-4                            [1, 128, 28, 28]          --
+│    └─Sequential: 2-10                            [1, 128, 28, 28]          --
+│    │    └─Conv2d: 3-21                           [1, 768, 28, 28]          98,304
+│    │    └─BatchNorm2d: 3-22                      [1, 768, 28, 28]          1,536
+│    │    └─ReLU6: 3-23                            [1, 768, 28, 28]          --
+│    │    └─Conv2d: 3-24                           [1, 768, 28, 28]          6,912
+│    │    └─BatchNorm2d: 3-25                      [1, 768, 28, 28]          1,536
+│    │    └─ReLU6: 3-26                            [1, 768, 28, 28]          --
+│    │    └─Conv2d: 3-27                           [1, 128, 28, 28]          98,304
+│    │    └─BatchNorm2d: 3-28                      [1, 128, 28, 28]          256
+├─ResNetBasicBlock: 1-5                            [1, 256, 28, 28]          --
+│    └─Conv2d: 2-11                                [1, 256, 28, 28]          294,912
+│    └─BatchNorm2d: 2-12                           [1, 256, 28, 28]          512
+│    └─ReLU: 2-13                                  [1, 256, 28, 28]          --
+│    └─Conv2d: 2-14                                [1, 256, 28, 28]          589,824
+│    └─BatchNorm2d: 2-15                           [1, 256, 28, 28]          512
+│    └─Sequential: 2-16                            [1, 256, 28, 28]          --
+│    │    └─Conv2d: 3-29                           [1, 256, 28, 28]          32,768
+│    │    └─BatchNorm2d: 3-30                      [1, 256, 28, 28]          512
+│    └─ReLU: 2-17                                  [1, 256, 28, 28]          --
+├─ResNetBasicBlock: 1-6                            [1, 256, 28, 28]          --
+│    └─Conv2d: 2-18                                [1, 256, 28, 28]          589,824
+│    └─BatchNorm2d: 2-19                           [1, 256, 28, 28]          512
+│    └─ReLU: 2-20                                  [1, 256, 28, 28]          --
+│    └─Conv2d: 2-21                                [1, 256, 28, 28]          589,824
+│    └─BatchNorm2d: 2-22                           [1, 256, 28, 28]          512
+│    └─ReLU: 2-23                                  [1, 256, 28, 28]          --
+├─ResNetBottleneck: 1-7                            [1, 256, 28, 28]          --
+│    └─Conv2d: 2-24                                [1, 64, 28, 28]           16,384
+│    └─BatchNorm2d: 2-25                           [1, 64, 28, 28]           128
+│    └─ReLU: 2-26                                  [1, 64, 28, 28]           --
+│    └─Conv2d: 2-27                                [1, 64, 28, 28]           36,864
+│    └─BatchNorm2d: 2-28                           [1, 64, 28, 28]           128
+│    └─ReLU: 2-29                                  [1, 64, 28, 28]           --
+│    └─Conv2d: 2-30                                [1, 256, 28, 28]          16,384
+│    └─BatchNorm2d: 2-31                           [1, 256, 28, 28]          512
+│    └─ReLU: 2-32                                  [1, 256, 28, 28]          --
+├─ResNetBottleneck: 1-8                            [1, 256, 28, 28]          --
+│    └─Conv2d: 2-33                                [1, 64, 28, 28]           16,384
+│    └─BatchNorm2d: 2-34                           [1, 64, 28, 28]           128
+│    └─ReLU: 2-35                                  [1, 64, 28, 28]           --
+│    └─Conv2d: 2-36                                [1, 64, 28, 28]           36,864
+│    └─BatchNorm2d: 2-37                           [1, 64, 28, 28]           128
+│    └─ReLU: 2-38                                  [1, 64, 28, 28]           --
+│    └─Conv2d: 2-39                                [1, 256, 28, 28]          16,384
+│    └─BatchNorm2d: 2-40                           [1, 256, 28, 28]          512
+│    └─ReLU: 2-41                                  [1, 256, 28, 28]          --
+├─ConvNeXtBlock: 1-9                               [1, 256, 28, 28]          --
+│    └─Sequential: 2-42                            [1, 256, 28, 28]          --
+│    │    └─Conv2d: 3-31                           [1, 256, 28, 28]          12,800
+│    │    └─BatchNorm2d: 3-32                      [1, 256, 28, 28]          512
+│    │    └─Conv2d: 3-33                           [1, 1024, 28, 28]         263,168
+│    │    └─GELU: 3-34                             [1, 1024, 28, 28]         --
+│    │    └─Conv2d: 3-35                           [1, 256, 28, 28]          262,400
+├─AdaptiveAvgPool2d: 1-10                          [1, 256, 1, 1]            --
+├─Sequential: 1-11                                 [1, 3]                    --
+│    └─Flatten: 2-43                               [1, 256]                  --
+│    └─Linear: 2-44                                [1, 512]                  131,584
+│    └─ReLU: 2-45                                  [1, 512]                  --
+│    └─Dropout: 2-46                               [1, 512]                  --
+│    └─Linear: 2-47                                [1, 256]                  131,328
+│    └─ReLU: 2-48                                  [1, 256]                  --
+│    └─Dropout: 2-49                               [1, 256]                  --
+│    └─Linear: 2-50                                [1, 3]                    771
+====================================================================================================
+Total params: 3,324,163
+Trainable params: 3,283,523
+Non-trainable params: 40,640
+Total mult-adds (G): 2.46
+====================================================================================================
+Input size (MB): 0.60
+Forward/backward pass size (MB): 135.88
+Params size (MB): 13.30
+Estimated Total Size (MB): 149.78
+==================================================================================================== 
+ 
+ 
+ 
  dinhthien@DESKTOP-9O4K9B3:/mnt/d/thien/model/model_mobilenet/mobilenetV2(master)$ python3 mobilenetV2_hybrid.py 
 /home/dinhthien/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
   warnings.warn(

@@ -268,6 +268,6 @@ def train_model(model, train_loader, val_loader, epochs=50):
 
 train_model(model, train_loader, val_loader, epochs=50)
 
-torch.save(model.state_dict())
+torch.save(model.state_dict(), "model_hybrid_mobilenetV2.pth")
 
 summary(model, input_size=(1, 3, 224, 224))
