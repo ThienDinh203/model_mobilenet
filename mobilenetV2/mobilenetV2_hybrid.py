@@ -1,220 +1,3 @@
-# import os
-# import torch
-# import torch.nn as nn
-# import torch.optim as optim
-# from torchvision import datasets, transforms, models
-# from torch.utils.data import DataLoader
-
-# # Set device
-# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-# # Load MobileNetV2 and freeze layers up to layer 12
-# mobilenet = models.mobilenet_v2(pretrained=True)
-# for param in mobilenet.features[:12].parameters():
-#     param.requires_grad = False
-
-# # Data transformations
-# transform = transforms.Compose([
-#     transforms.Resize((224, 224)),
-#     transforms.ToTensor(),
-#     transforms.Normalize(mean=[0.485, 0.456, 0.406],
-#                          std=[0.229, 0.224, 0.225]),
-# ])
-
-# # Load dataset
-# dataset_path = "../../face_dataset_224_augment"
-# train_dataset = datasets.ImageFolder(root=dataset_path, transform=transform)
-# train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-
-# # Define SEBlock
-# class SEBlock(nn.Module):
-#     def __init__(self, in_channels, reduction=16):
-#         super(SEBlock, self).__init__()
-#         self.global_avg_pool = nn.AdaptiveAvgPool2d(1)
-#         self.fc = nn.Sequential(
-#             nn.Linear(in_channels, in_channels // reduction, bias=False),
-#             nn.ReLU(inplace=True),
-#             nn.Linear(in_channels // reduction, in_channels, bias=False),
-#             nn.Sigmoid()
-#         )
-
-#     def forward(self, x):
-#         b, c, _, _ = x.size()
-#         se = self.global_avg_pool(x).view(b, c)
-#         se = self.fc(se).view(b, c, 1, 1)
-#         return x * se.expand_as(x)
-
-# # Define InvertedResidual
-# class InvertedResidual(nn.Module):
-#     def __init__(self, in_channels, out_channels, expansion=6, stride=1):
-#         super(InvertedResidual, self).__init__()
-#         hidden_dim = in_channels * expansion
-#         self.conv = nn.Sequential(
-#             nn.Conv2d(in_channels, hidden_dim, 1, bias=False),
-#             nn.BatchNorm2d(hidden_dim),
-#             nn.ReLU6(inplace=True),
-#             nn.Conv2d(hidden_dim, hidden_dim, 3, stride, 1, groups=hidden_dim, bias=False),
-#             nn.BatchNorm2d(hidden_dim),
-#             nn.ReLU6(inplace=True),
-#             nn.Conv2d(hidden_dim, out_channels, 1, bias=False),
-#             nn.BatchNorm2d(out_channels),
-#         )
-#         self.use_residual = stride == 1 and in_channels == out_channels
-
-#     def forward(self, x):
-#         if self.use_residual:
-#             return x + self.conv(x)
-#         else:
-#             return self.conv(x)
-
-# # Define ResNetBasicBlock
-# class ResNetBasicBlock(nn.Module):
-#     def __init__(self, in_channels, out_channels, stride=1):
-#         super(ResNetBasicBlock, self).__init__()
-#         self.conv1 = nn.Conv2d(in_channels, out_channels, 3, stride, 1, bias=False)
-#         self.bn1 = nn.BatchNorm2d(out_channels)
-#         self.relu = nn.ReLU(inplace=True)
-#         self.conv2 = nn.Conv2d(out_channels, out_channels, 3, 1, 1, bias=False)
-#         self.bn2 = nn.BatchNorm2d(out_channels)
-
-#         self.downsample = None
-#         if stride != 1 or in_channels != out_channels:
-#             self.downsample = nn.Sequential(
-#                 nn.Conv2d(in_channels, out_channels, 1, stride, bias=False),
-#                 nn.BatchNorm2d(out_channels)
-#             )
-
-#     def forward(self, x):
-#         identity = x
-#         out = self.relu(self.bn1(self.conv1(x)))
-#         out = self.bn2(self.conv2(out))
-#         if self.downsample is not None:
-#             identity = self.downsample(x)
-#         return self.relu(out + identity)
-
-# # Define ResNetBottleneck
-# class ResNetBottleneck(nn.Module):
-#     expansion = 4
-#     def __init__(self, in_channels, mid_channels, stride=1):
-#         super(ResNetBottleneck, self).__init__()
-#         out_channels = mid_channels * self.expansion
-#         self.conv1 = nn.Conv2d(in_channels, mid_channels, 1, bias=False)
-#         self.bn1 = nn.BatchNorm2d(mid_channels)
-#         self.conv2 = nn.Conv2d(mid_channels, mid_channels, 3, stride, 1, bias=False)
-#         self.bn2 = nn.BatchNorm2d(mid_channels)
-#         self.conv3 = nn.Conv2d(mid_channels, out_channels, 1, bias=False)
-#         self.bn3 = nn.BatchNorm2d(out_channels)
-#         self.relu = nn.ReLU(inplace=True)
-
-#         self.downsample = None
-#         if stride != 1 or in_channels != out_channels:
-#             self.downsample = nn.Sequential(
-#                 nn.Conv2d(in_channels, out_channels, 1, stride, bias=False),
-#                 nn.BatchNorm2d(out_channels)
-#             )
-
-#     def forward(self, x):
-#         identity = x
-#         out = self.relu(self.bn1(self.conv1(x)))
-#         out = self.relu(self.bn2(self.conv2(out)))
-#         out = self.bn3(self.conv3(out))
-#         if self.downsample is not None:
-#             identity = self.downsample(x)
-#         return self.relu(out + identity)
-
-# # Define ConvNeXtBlock
-# class ConvNeXtBlock(nn.Module):
-#     def __init__(self, in_channels):
-#         super(ConvNeXtBlock, self).__init__()
-#         self.conv = nn.Sequential(
-#             nn.Conv2d(in_channels, in_channels, 7, padding=3, groups=in_channels),
-#             nn.BatchNorm2d(in_channels),
-#             nn.Conv2d(in_channels, 4 * in_channels, 1),
-#             nn.GELU(),
-#             nn.Conv2d(4 * in_channels, in_channels, 1),
-#         )
-
-#     def forward(self, x):
-#         return x + self.conv(x)
-
-# # Define Custom Model
-# class CustomModel(nn.Module):
-#     def __init__(self, mobilenet, num_classes=3):
-#         super(CustomModel, self).__init__()
-#         self.backbone1 = mobilenet.features[:12]
-#         self.backbone2 = mobilenet.features[12:]
-
-#         self.se_block = SEBlock(1280)
-#         self.inverted_residual1 = InvertedResidual(1280, 128)
-#         self.inverted_residual2 = InvertedResidual(128, 128)
-
-#         self.resnet_basic1 = ResNetBasicBlock(128, 256)
-#         self.resnet_basic2 = ResNetBasicBlock(256, 256)
-
-#         self.resnet_bottleneck1 = ResNetBottleneck(256, 64)
-#         self.resnet_bottleneck2 = ResNetBottleneck(256, 64)
-
-#         self.convnext_block = ConvNeXtBlock(256)
-
-#         self.pool = nn.AdaptiveAvgPool2d(1)
-#         self.classifier = nn.Sequential(
-#             nn.Flatten(),
-#             nn.Linear(256, 1024),
-#             nn.ReLU(),
-#             nn.Dropout(0.3),
-#             nn.Linear(1024, 512),
-#             nn.ReLU(),
-#             nn.Dropout(0.3),
-#             nn.Linear(512, num_classes)
-#         )
-
-#     def forward(self, x):
-#         x = self.backbone1(x)
-#         x = self.backbone2(x)
-#         x = self.se_block(x)
-#         x = self.inverted_residual1(x)
-#         x = self.inverted_residual2(x)
-#         x = self.resnet_basic1(x)
-#         x = self.resnet_basic2(x)
-#         x = self.resnet_bottleneck1(x)
-#         x = self.resnet_bottleneck2(x)
-#         x = self.convnext_block(x)
-#         x = self.pool(x)
-#         x = self.classifier(x)
-#         return x
-
-# # Initialize model
-# model = CustomModel(mobilenet, num_classes=3).to(device)
-
-# # Define loss function and optimizer
-# criterion = nn.CrossEntropyLoss()
-# optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=1e-4)
-
-# # Training loop
-# num_epochs = 50
-# for epoch in range(num_epochs):
-#     model.train()
-#     running_loss = 0.0
-#     correct = 0
-#     total = 0
-
-#     for inputs, labels in train_loader:
-#         inputs, labels = inputs.to(device), labels.to(device)
-
-#         optimizer.zero_grad()
-#         outputs = model(inputs)
-#         loss = criterion(outputs, labels)
-#         loss.backward()
-#         optimizer.step()
-
-#         running_loss += loss.item()
-#         _, predicted = outputs.max(1)
-#         total += labels.size(0)
-#         correct += predicted.eq(labels).sum().item()
-
-#     acc = 100. * correct / total
-#     print(f"Epoch {epoch + 1}/{num_epochs} - Loss: {running_loss:.4f} - Accuracy: {acc:.2f}%")
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -227,7 +10,7 @@ from torchinfo import summary
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-data_dir = "../../face_dataset_224_augment/face_dataset_224_augment"
+data_dir = "../../face_dataset_224_augment"
 
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
@@ -435,7 +218,7 @@ optimizer = optim.AdamW(model.parameters(), lr=0.00005, weight_decay=1e-4)
 scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.8, patience=1)
 
 
-def train_model(model, train_loader, val_loader, epochs=20):
+def train_model(model, train_loader, val_loader, epochs=50):
     scaler = torch.cuda.amp.GradScaler()
 
     for epoch in range(epochs):
@@ -483,7 +266,7 @@ def train_model(model, train_loader, val_loader, epochs=20):
         scheduler.step(val_loss)
 
 
-train_model(model, train_loader, val_loader, epochs=20)
+train_model(model, train_loader, val_loader, epochs=50)
 
 torch.save(model.state_dict())
 
