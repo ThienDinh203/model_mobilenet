@@ -1,0 +1,150 @@
+ dinhthien@DESKTOP-9O4K9B3:/mnt/d/thien/model/model_mobilenet/efficientnet(master)$ python3 model_efficientnet.py 
+Using device: cuda
+/home/dinhthien/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/dinhthien/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Epoch 1/40 | Train Loss: 0.3133, Acc: 88.13% | Val Loss: 1.4417, Acc: 97.57%
+Epoch 2/40 | Train Loss: 0.1036, Acc: 96.56% | Val Loss: 0.7531, Acc: 98.65%
+Epoch 3/40 | Train Loss: 0.0601, Acc: 97.99% | Val Loss: 2.5805, Acc: 98.78%
+Epoch 4/40 | Train Loss: 0.0439, Acc: 98.48% | Val Loss: 5.0653, Acc: 98.47%
+Epoch 5/40 | Train Loss: 0.0370, Acc: 98.76% | Val Loss: 0.1204, Acc: 98.60%
+Epoch 6/40 | Train Loss: 0.0290, Acc: 99.01% | Val Loss: 1.4714, Acc: 98.47%
+Epoch 7/40 | Train Loss: 0.0212, Acc: 99.39% | Val Loss: 5.2213, Acc: 98.69%
+Epoch 8/40 | Train Loss: 0.0248, Acc: 99.10% | Val Loss: 2.4871, Acc: 98.74%
+Epoch 9/40 | Train Loss: 0.0200, Acc: 99.48% | Val Loss: 3.1400, Acc: 98.74%
+Epoch 10/40 | Train Loss: 0.0207, Acc: 99.35% | Val Loss: 1.4350, Acc: 98.42%
+Epoch 11/40 | Train Loss: 0.0157, Acc: 99.57% | Val Loss: 11.2831, Acc: 98.56%
+Epoch 12/40 | Train Loss: 0.0181, Acc: 99.30% | Val Loss: 5.7421, Acc: 98.87%
+Epoch 13/40 | Train Loss: 0.0086, Acc: 99.71% | Val Loss: 0.8494, Acc: 98.51%
+Epoch 14/40 | Train Loss: 0.0124, Acc: 99.63% | Val Loss: 9.2194, Acc: 97.79%
+Epoch 15/40 | Train Loss: 0.0107, Acc: 99.70% | Val Loss: 16.6123, Acc: 98.65%
+Epoch 16/40 | Train Loss: 0.0073, Acc: 99.80% | Val Loss: 5.4728, Acc: 97.61%
+Epoch 17/40 | Train Loss: 0.0115, Acc: 99.67% | Val Loss: 3.6307, Acc: 98.65%
+Epoch 18/40 | Train Loss: 0.0132, Acc: 99.57% | Val Loss: 0.0420, Acc: 98.42%
+Epoch 19/40 | Train Loss: 0.0081, Acc: 99.77% | Val Loss: 0.1001, Acc: 98.56%
+Epoch 20/40 | Train Loss: 0.0115, Acc: 99.63% | Val Loss: 0.3319, Acc: 98.51%
+Epoch 21/40 | Train Loss: 0.0100, Acc: 99.64% | Val Loss: 0.0631, Acc: 98.51%
+Epoch 22/40 | Train Loss: 0.0107, Acc: 99.64% | Val Loss: 5.3086, Acc: 98.78%
+Epoch 23/40 | Train Loss: 0.0073, Acc: 99.84% | Val Loss: 1.2788, Acc: 98.69%
+Epoch 24/40 | Train Loss: 0.0066, Acc: 99.80% | Val Loss: 3.7828, Acc: 98.56%
+Epoch 25/40 | Train Loss: 0.0035, Acc: 99.89% | Val Loss: 10.8585, Acc: 98.47%
+Epoch 26/40 | Train Loss: 0.0095, Acc: 99.71% | Val Loss: 10.9769, Acc: 98.33%
+Epoch 27/40 | Train Loss: 0.0094, Acc: 99.70% | Val Loss: 0.0240, Acc: 98.51%
+Epoch 28/40 | Train Loss: 0.0060, Acc: 99.80% | Val Loss: 9.4830, Acc: 98.65%
+Epoch 29/40 | Train Loss: 0.0049, Acc: 99.88% | Val Loss: 0.0223, Acc: 98.92%
+Epoch 30/40 | Train Loss: 0.0076, Acc: 99.79% | Val Loss: 0.4733, Acc: 98.96%
+Epoch 31/40 | Train Loss: 0.0098, Acc: 99.71% | Val Loss: 6.0552, Acc: 98.78%
+Epoch 32/40 | Train Loss: 0.0030, Acc: 99.91% | Val Loss: 2.3864, Acc: 98.87%
+Epoch 33/40 | Train Loss: 0.0064, Acc: 99.79% | Val Loss: 0.0271, Acc: 98.87%
+Epoch 34/40 | Train Loss: 0.0059, Acc: 99.86% | Val Loss: 0.1039, Acc: 98.87%
+Epoch 35/40 | Train Loss: 0.0065, Acc: 99.84% | Val Loss: 10.6064, Acc: 98.74%
+Epoch 36/40 | Train Loss: 0.0081, Acc: 99.76% | Val Loss: 0.0349, Acc: 98.83%
+Epoch 37/40 | Train Loss: 0.0033, Acc: 99.92% | Val Loss: 4.8678, Acc: 98.92%
+Epoch 38/40 | Train Loss: 0.0028, Acc: 99.92% | Val Loss: 4.7596, Acc: 98.74%
+Epoch 39/40 | Train Loss: 0.0040, Acc: 99.83% | Val Loss: 2.7817, Acc: 98.69%
+Epoch 40/40 | Train Loss: 0.0047, Acc: 99.84% | Val Loss: 0.0390, Acc: 98.87%
+Model saved to efficientnet_b0_finetuned.pth
+=========================================================================================================
+Layer (type:depth-idx)                                  Output Shape              Param #
+=========================================================================================================
+EfficientNet                                            [1, 3]                    --
+├─Sequential: 1-1                                       [1, 1280, 7, 7]           --
+│    └─Conv2dNormActivation: 2-1                        [1, 32, 112, 112]         --
+│    │    └─Conv2d: 3-1                                 [1, 32, 112, 112]         (864)
+│    │    └─BatchNorm2d: 3-2                            [1, 32, 112, 112]         (64)
+│    │    └─SiLU: 3-3                                   [1, 32, 112, 112]         --
+│    └─Sequential: 2-2                                  [1, 16, 112, 112]         --
+│    │    └─MBConv: 3-4                                 [1, 16, 112, 112]         (1,448)
+│    └─Sequential: 2-3                                  [1, 24, 56, 56]           --
+│    │    └─MBConv: 3-5                                 [1, 24, 56, 56]           (6,004)
+│    │    └─MBConv: 3-6                                 [1, 24, 56, 56]           (10,710)
+│    └─Sequential: 2-4                                  [1, 40, 28, 28]           --
+│    │    └─MBConv: 3-7                                 [1, 40, 28, 28]           (15,350)
+│    │    └─MBConv: 3-8                                 [1, 40, 28, 28]           (31,290)
+│    └─Sequential: 2-5                                  [1, 80, 14, 14]           --
+│    │    └─MBConv: 3-9                                 [1, 80, 14, 14]           (37,130)
+│    │    └─MBConv: 3-10                                [1, 80, 14, 14]           (102,900)
+│    │    └─MBConv: 3-11                                [1, 80, 14, 14]           (102,900)
+│    └─Sequential: 2-6                                  [1, 112, 14, 14]          --
+│    │    └─MBConv: 3-12                                [1, 112, 14, 14]          126,004
+│    │    └─MBConv: 3-13                                [1, 112, 14, 14]          208,572
+│    │    └─MBConv: 3-14                                [1, 112, 14, 14]          208,572
+│    └─Sequential: 2-7                                  [1, 192, 7, 7]            --
+│    │    └─MBConv: 3-15                                [1, 192, 7, 7]            262,492
+│    │    └─MBConv: 3-16                                [1, 192, 7, 7]            587,952
+│    │    └─MBConv: 3-17                                [1, 192, 7, 7]            587,952
+│    │    └─MBConv: 3-18                                [1, 192, 7, 7]            587,952
+│    └─Sequential: 2-8                                  [1, 320, 7, 7]            --
+│    │    └─MBConv: 3-19                                [1, 320, 7, 7]            717,232
+│    └─Conv2dNormActivation: 2-9                        [1, 1280, 7, 7]           --
+│    │    └─Conv2d: 3-20                                [1, 1280, 7, 7]           409,600
+│    │    └─BatchNorm2d: 3-21                           [1, 1280, 7, 7]           2,560
+│    │    └─SiLU: 3-22                                  [1, 1280, 7, 7]           --
+├─AdaptiveAvgPool2d: 1-2                                [1, 1280, 1, 1]           --
+├─Sequential: 1-3                                       [1, 3]                    --
+│    └─Dropout: 2-10                                    [1, 1280]                 --
+│    └─Linear: 2-11                                     [1, 3]                    3,843
+=========================================================================================================
+Total params: 4,011,391
+Trainable params: 3,702,731
+Non-trainable params: 308,660
+Total mult-adds (M): 384.59
+=========================================================================================================
+Input size (MB): 0.60
+Forward/backward pass size (MB): 107.88
+Params size (MB): 16.05
+Estimated Total Size (MB): 124.53
+=========================================================================================================
+ 
+ 
+ 
+ 
+ dinhthien@DESKTOP-9O4K9B3:/mnt/d/thien/model/model_mobilenet/efficientnet(master)$ python3 model_efficientnet.py 
+Using device: cuda
+/home/dinhthien/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/dinhthien/.local/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Downloading: "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth" to /home/dinhthien/.cache/torch/hub/checkpoints/efficientnet_b0_rwightman-7f5810bc.pth
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20.5M/20.5M [00:00<00:00, 24.0MB/s]
+Epoch 1/40 | Train Loss: 0.3136, Acc: 88.38% | Val Loss: 0.3032, Acc: 97.43%
+Epoch 2/40 | Train Loss: 0.0995, Acc: 96.84% | Val Loss: 1.7393, Acc: 97.97%
+Epoch 3/40 | Train Loss: 0.0637, Acc: 97.73% | Val Loss: 0.5896, Acc: 98.11%
+Epoch 4/40 | Train Loss: 0.0435, Acc: 98.72% | Val Loss: 0.9465, Acc: 98.24%
+Epoch 5/40 | Train Loss: 0.0301, Acc: 98.97% | Val Loss: 0.9164, Acc: 98.33%
+Epoch 6/40 | Train Loss: 0.0272, Acc: 99.12% | Val Loss: 4.3335, Acc: 98.33%
+Epoch 7/40 | Train Loss: 0.0213, Acc: 99.20% | Val Loss: 1.0589, Acc: 98.51%
+Epoch 8/40 | Train Loss: 0.0168, Acc: 99.52% | Val Loss: 0.1665, Acc: 98.15%
+Epoch 9/40 | Train Loss: 0.0202, Acc: 99.33% | Val Loss: 0.6691, Acc: 98.24%
+Epoch 10/40 | Train Loss: 0.0148, Acc: 99.54% | Val Loss: 1.4364, Acc: 98.15%
+Epoch 11/40 | Train Loss: 0.0163, Acc: 99.46% | Val Loss: 0.0719, Acc: 98.20%
+Epoch 12/40 | Train Loss: 0.0119, Acc: 99.67% | Val Loss: 0.8043, Acc: 98.65%
+Epoch 13/40 | Train Loss: 0.0154, Acc: 99.52% | Val Loss: 1.6535, Acc: 98.15%
+Epoch 14/40 | Train Loss: 0.0089, Acc: 99.73% | Val Loss: 0.1003, Acc: 98.33%
+Epoch 15/40 | Train Loss: 0.0147, Acc: 99.50% | Val Loss: 0.4698, Acc: 98.20%
+Epoch 16/40 | Train Loss: 0.0091, Acc: 99.74% | Val Loss: 1.1929, Acc: 98.51%
+Epoch 17/40 | Train Loss: 0.0087, Acc: 99.68% | Val Loss: 5.1091, Acc: 98.33%
+Epoch 18/40 | Train Loss: 0.0058, Acc: 99.83% | Val Loss: 0.6573, Acc: 98.38%
+Epoch 19/40 | Train Loss: 0.0108, Acc: 99.65% | Val Loss: 9.1043, Acc: 98.29%
+Epoch 20/40 | Train Loss: 0.0101, Acc: 99.73% | Val Loss: 1.5703, Acc: 98.38%
+Epoch 21/40 | Train Loss: 0.0095, Acc: 99.63% | Val Loss: 3.9062, Acc: 98.42%
+Epoch 22/40 | Train Loss: 0.0046, Acc: 99.88% | Val Loss: 3.6938, Acc: 98.06%
+Epoch 23/40 | Train Loss: 0.0076, Acc: 99.80% | Val Loss: 1.0290, Acc: 98.47%
+Epoch 24/40 | Train Loss: 0.0081, Acc: 99.85% | Val Loss: 1.2789, Acc: 98.42%
+Epoch 25/40 | Train Loss: 0.0086, Acc: 99.75% | Val Loss: 0.5026, Acc: 98.29%
+Epoch 26/40 | Train Loss: 0.0081, Acc: 99.82% | Val Loss: 3.5626, Acc: 98.20%
+Epoch 27/40 | Train Loss: 0.0058, Acc: 99.82% | Val Loss: 4.8884, Acc: 98.29%
+Epoch 28/40 | Train Loss: 0.0046, Acc: 99.86% | Val Loss: 1.1577, Acc: 98.11%
+Epoch 29/40 | Train Loss: 0.0076, Acc: 99.74% | Val Loss: 1.2251, Acc: 98.56%
+Epoch 30/40 | Train Loss: 0.0060, Acc: 99.86% | Val Loss: 0.4745, Acc: 98.06%
+Epoch 31/40 | Train Loss: 0.0049, Acc: 99.86% | Val Loss: 5.8743, Acc: 98.06%
+Epoch 32/40 | Train Loss: 0.0076, Acc: 99.79% | Val Loss: 0.2213, Acc: 98.02%
+Epoch 33/40 | Train Loss: 0.0049, Acc: 99.89% | Val Loss: 5.7945, Acc: 98.38%
+Epoch 34/40 | Train Loss: 0.0048, Acc: 99.82% | Val Loss: 0.4457, Acc: 98.11%
+Epoch 35/40 | Train Loss: 0.0021, Acc: 99.94% | Val Loss: 5.6834, Acc: 98.24%
+Epoch 36/40 | Train Loss: 0.0077, Acc: 99.79% | Val Loss: 2.4369, Acc: 98.15%
+Epoch 37/40 | Train Loss: 0.0031, Acc: 99.92% | Val Loss: 0.8018, Acc: 98.24%
+Epoch 38/40 | Train Loss: 0.0045, Acc: 99.86% | Val Loss: 2.4809, Acc: 98.33%
+Epoch 39/40 | Train Loss: 0.0037, Acc: 99.86% | Val Loss: 0.1613, Acc: 98.38%
+Epoch 40/40 | Train Loss: 0.0040, Acc: 99.85% | Val Loss: 2.4368, Acc: 98.33%
